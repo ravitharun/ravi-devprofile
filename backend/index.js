@@ -1,4 +1,4 @@
-const app = require('./app'); // or './backend/app' if index.js is at root
+const app = require('./app');
 
 const PORT = process.env.PORT || 3000;
 
