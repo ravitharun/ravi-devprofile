@@ -15,7 +15,7 @@ function Blog() {
           <Navbar page={page} />
 
           {/* Skills */}
-          <h3>Resume page</h3>
+          <h3>{page} page</h3>
         </div>
       </div>
     </>

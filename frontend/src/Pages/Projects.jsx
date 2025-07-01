@@ -3,7 +3,7 @@ import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 
 function Projects() {
-    const page = "Portfolio";
+  const page = "Portfolio";
 
   return (
     <>
@@ -13,10 +13,10 @@ function Projects() {
 
         {/* Main Content */}
         <div className="flex-1 p-4 md:p-8">
-          <Navbar  page={page}/>
+          <Navbar page={page} />
 
           {/* Skills */}
-          <h3>Resume page</h3>
+          <h3>{page} page</h3>
         </div>
       </div>
     </>

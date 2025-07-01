@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { name: "About", href: "/", active: true },
@@ -9,7 +10,7 @@ const navLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-const Navbar = ({page}) => {
+const Navbar = ({ page }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -32,19 +33,23 @@ const Navbar = ({page}) => {
         } md:flex gap-6 text-sm md:text-base text-gray-300 mt-4 md:mt-0`}
       >
         {navLinks.map((link) => (
-          <li key={link.name}>
-            <a
-              href={link.href}
-        className={`hover:text-yellow-400 transition duration-200 
+          <Link to={link.href}>
+            <li key={link.name}>
+              <a
+                className={`hover:text-yellow-400 transition duration-200 
   ${link.active ? "text-yellow-400 font-semibold" : ""} 
-  ${link.name === page ? "text-cyan-500 p-2 font-mono underline decoration-2 underline-offset-4" : ""}
+  ${
+    link.name === page
+      ? "text-cyan-500 p-2 font-mono underline decoration-2 underline-offset-4"
+      : ""
+  }
 `}
-
-              onClick={() => setIsOpen(false)} // close menu on click (mobile)
-            >
-              {link.name}
-            </a>
-          </li>
+                onClick={() => setIsOpen(false)} // close menu on click (mobile)
+              >
+                {link.name}
+              </a>
+            </li>
+          </Link>
         ))}
       </ul>
     </nav>
