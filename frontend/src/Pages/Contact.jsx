@@ -32,7 +32,7 @@ function Contact() {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/Send", data);
+      const response = await axios.post("https://protifilo-backend.onrender.com/Send", data);
       alert(response.data.message);
 
       // ✅ Clear form
