@@ -1,9 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
-
+import axios from "axios";
 function Contact() {
   const page = "Contact";
+  const [name, setName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [Subject, setSubject] = useState("");
+  const [Message, setMessage] = useState("");
+  const SendMessage = async (e) => {
+    e.preventDefault(); // ✅ call this first
+
+    const data = {
+      Name: name,
+      Email: Email,
+      Subject: Subject,
+      Message: Message,
+    };
+
+    // ✅ Frontend validation
+    if (!data.Name || !data.Email || !data.Subject || !data.Message) {
+      alert("Please fill in all the fields.");
+      return;
+    }
+
+    // ✅ Basic email format check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.Email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    try {
+      const response = await axios.post("http://localhost:3000/Send", data);
+      alert(response.data.message);
+
+      // ✅ Clear form
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    } catch (error) {
+      console.error("❌ Error sending message:", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row overflow-x-hidden">
@@ -35,6 +76,7 @@ function Contact() {
                 <input
                   type="text"
                   placeholder="Your Name"
+                  onChange={(event) => setName(event.target.value)}
                   className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
               </div>
@@ -43,6 +85,7 @@ function Contact() {
                 <input
                   type="email"
                   placeholder="you@example.com"
+                  onChange={(event) => setEmail(event.target.value)}
                   className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
               </div>
@@ -53,6 +96,7 @@ function Contact() {
               <input
                 type="text"
                 placeholder="Reason for contacting"
+                onChange={(event) => setSubject(event.target.value)}
                 className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
             </div>
@@ -62,12 +106,14 @@ function Contact() {
               <textarea
                 rows="4"
                 placeholder="Your message..."
+                onChange={(event) => setMessage(event.target.value)}
                 className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
               ></textarea>
             </div>
 
             <button
               type="button"
+              onClick={SendMessage}
               className="bg-yellow-400 text-black font-semibold px-6 py-2 rounded-lg hover:bg-yellow-300 transition"
             >
               Send Message
