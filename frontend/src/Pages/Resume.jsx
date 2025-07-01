@@ -99,7 +99,7 @@ function Resume() {
 
         <div className="mt-8 text-center">
           <p className="text-lg mb-4 text-gray-300 font-medium">
-            Want to know more about my experience and skills? Feel free to
+            👉 Want to know more about my experience and skills? Feel free to
             download my resume."Interested in my background and technical
             expertise? Download my resume to explore my skills and experience in
             detail."

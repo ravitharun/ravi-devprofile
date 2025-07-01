@@ -1,0 +1,241 @@
+[
+  {
+    "id": 1,
+    "title": "Protifilo Website",
+    "description": "My personal portfolio website showcasing my development skills, projects, and contact information with a responsive modern UI.",
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+    "images": [
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+    ],
+    "tools": [
+      "Figma",
+      "Netlify",
+      "Git"
+    ],
+    "features": [
+      "Responsive layout",
+      "Animated transitions",
+      "Dark mode toggle"
+    ],
+    "role": "Solo Developer",
+    "type": "Personal Project",
+    "tags": [
+      "Portfolio",
+      "React",
+      "UI/UX"
+    ],
+    "startDate": "2024-08-01",
+    "endDate": "2024-09-15",
+    "duration": "1.5 months",
+    "status": "Completed",
+    "liveLink": "https://ravi-projecthub.netlify.app/",
+    "githubLink": "https://github.com/ravitharun/protifilo-ui",
+    "videoDemo": "https://www.youtube.com/watch?v=gxHXPmePnvo",
+    "screenshots": [
+      "/images/protifilo1.png",
+      "/images/protifilo2.png"
+    ],
+    "isFeatured": true,
+    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+    "ProjectType": "Web"
+  },
+  {
+    "id": 2,
+    "title": "Recipe Finder App",
+    "description": "A React-based web application that allows users to search for recipes using ingredients with a simple and attractive UI.",
+    "techStack": [
+      "React",
+      "CSS",
+      "Edamam API"
+    ],
+    "images": [
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+    ],
+    "tools": [
+      "GitHub",
+      "Netlify"
+    ],
+    "features": [
+      "Search by ingredients",
+      "Recipe details",
+      "Responsive UI"
+    ],
+    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+    "role": "Frontend Developer",
+    "type": "Personal Project",
+    "tags": [
+      "API",
+      "Frontend",
+      "Food"
+    ],
+    "startDate": "2024-10-05",
+    "endDate": "2024-10-20",
+    "duration": "15 days",
+    "status": "Completed",
+    "liveLink": "https://recipe-finder-ravi.netlify.app/",
+    "githubLink": "https://github.com/ravitharun/React-Recipe-Finder",
+    "videoDemo": "https://youtu.be/recipe-demo",
+    "screenshots": [
+      "/images/recipe1.png"
+    ],
+    "isFeatured": false,
+    "ProjectType": "Web"
+  },
+  {
+    "id": 3,
+    "title": "Job Finder Platform",
+    "description": "A job search platform built using React and the Remotive API to help frontend developers find remote jobs with filters.",
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "Remotive API"
+    ],
+    "images": [
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+    ],
+    "tools": [
+      "Vite",
+      "Netlify",
+      "Axios"
+    ],
+    "features": [
+      "Job filters",
+      "Live search",
+      "Card-based layout"
+    ],
+    "role": "Frontend Developer",
+    "type": "Freelance Project",
+    "tags": [
+      "Job Portal",
+      "API",
+      "React"
+    ],
+    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+    "startDate": "2025-01-01",
+    "endDate": "2025-01-20",
+    "duration": "20 days",
+    "status": "In Progress",
+    "liveLink": "https://job-finder-ravi.netlify.app/",
+    "githubLink": "https://github.com/ravitharun/jobfinder-frontend",
+    "videoDemo": "",
+    "screenshots": [
+      "/images/jobfinder.png"
+    ],
+    "isFeatured": true,
+    "ProjectType": "Web"
+  },
+  {
+    "id": 4,
+    "title": "Music Player",
+    "description": "A simple, animated React music player with play/pause, track switching, and responsive design.",
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "JavaScript"
+    ],
+    "images": [
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+    ],
+    "tools": [
+      "Git",
+      "Netlify"
+    ],
+    "features": [
+      "Play/Pause",
+      "Animated UI",
+      "Responsive"
+    ],
+    "role": "Frontend Developer",
+    "type": "Learning Project",
+    "tags": [
+      "Media",
+      "Player",
+      "React"
+    ],
+    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+    "startDate": "2024-06-10",
+    "endDate": "2024-06-30",
+    "duration": "20 days",
+    "status": "Completed",
+    "liveLink": "https://fastidious-quokka-47fcbe.netlify.app/",
+    "githubLink": "https://github.com/ravitharun/MUSICPLAYER-react",
+    "videoDemo": "https://youtu.be/musicplayer-demo",
+    "screenshots": [
+      "/images/music1.png",
+      "/images/music2.png"
+    ],
+    "isFeatured": false,
+    "ProjectType": "Web"
+  },
+  {
+    "id": 5,
+    "title": "College LMS System",
+    "description": "A full-stack learning management system for college use, with role-based login, instructor dashboard, and course upload features.",
+    "techStack": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "tools": [
+      "Postman",
+      "Vercel",
+      "Mongoose",
+      "GitHub"
+    ],
+    "images": [
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+    ],
+    "features": [
+      "Role-based login",
+      "Course upload",
+      "Profile editing",
+      "Attendance dashboard"
+    ],
+    "role": "Full Stack Developer",
+    "type": "College Project",
+    "tags": [
+      "LMS",
+      "MERN",
+      "Education"
+    ],
+    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+    "startDate": "2025-03-01",
+    "endDate": "2025-04-15",
+    "duration": "1.5 months",
+    "status": "In Progress",
+    "liveLink": "https://college-lms-ravi.netlify.app/",
+    "githubLink": "https://github.com/ravitharun/lms",
+    "videoDemo": "https://youtu.be/lms-demo",
+    "testCredentials": {
+      "student": {
+        "email": "student@test.com",
+        "password": "123456"
+      },
+      "instructor": {
+        "email": "teacher@test.com",
+        "password": "abcdef"
+      }
+    },
+    "screenshots": [
+      "/images/lms1.png",
+      "/images/lms2.png"
+    ],
+    "isFeatured": true,
+    "ProjectType": "Web"
+  }
+]
