@@ -11,7 +11,7 @@ import {
   FaGithub,
   FaLocationArrow,
 } from "react-icons/fa";
-import pic from "/Profie.jpg"
+import pic from "../Pages/Profie.jpg"
 const LeftSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
