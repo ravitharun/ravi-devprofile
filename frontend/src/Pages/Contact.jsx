@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import axios from "axios";
@@ -8,6 +8,18 @@ function Contact() {
   const [Email, setEmail] = useState("");
   const [Subject, setSubject] = useState("");
   const [Message, setMessage] = useState("");
+  const [loading, Setloading] = useState(false);
+  const [URL, Seturl] = useState("");
+  useEffect(() => {
+    const Load = () => {
+      let url =
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.7749188182!2d77.30126302222186!3d12.954459536468722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1751300983563!5m2!1sen!2sin";
+      Seturl(url);
+      Setloading(true);
+    };
+    Load();
+  }, []);
+
   const SendMessage = async (e) => {
     e.preventDefault(); // ✅ call this first
 
@@ -32,7 +44,10 @@ function Contact() {
     }
 
     try {
-      const response = await axios.post("https://protifilo-backend.onrender.com/Send", data);
+      const response = await axios.post(
+        "https://protifilo-backend.onrender.com/Send",
+        data
+      );
       alert(response.data.message);
 
       // ✅ Clear form
@@ -122,17 +137,35 @@ function Contact() {
 
           {/* Google Maps */}
           <div className="w-full h-full">
-            <iframe
-              title="Google Maps"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.7749188182!2d77.30126302222186!3d12.954459536468722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1751300983563!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0, minHeight: "400px" }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            {loading == true ? (
+              <iframe
+                title="Google Maps"
+                src={URL}
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: "400px" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            ) : (
+              <p className="text-red-500">Loading The Map Please Wait.</p>
+            )}
           </div>
+          <>
+            <div className="bg-gray-800 p-5 rounded-xl text-center mt-8 shadow-lg p-3 ">
+              <p className="text-gray-300">
+                Having trouble sending a message? You can also contact me
+                directly via email:
+              </p>
+              <a
+                href="mailto:tharunravi672@gmail.com"
+                className="block mt-2 text-yellow-400 font-semibold hover:underline hover:text-blue-500"
+title="Have a project in mind? Feel free to email me!"              >
+                tharunravi672@gmail.com
+              </a>
+            </div>
+          </>
         </div>
       </div>
     </div>

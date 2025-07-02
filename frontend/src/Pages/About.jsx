@@ -1,7 +1,13 @@
 import React, { useEffect } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
-import { FaCode, FaPaintBrush, FaMobileAlt, FaCamera } from "react-icons/fa";
+import {
+  FaCode,
+  FaPaintBrush,
+  FaMobileAlt,
+  FaCamera,
+  FaRobot,
+} from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -123,15 +129,16 @@ const About = () => {
               },
               {
                 icon: <FaMobileAlt />,
-                title: "Mobile Apps",
+                title: "Mobile Design",
                 desc: "Building responsive and interactive mobile-friendly websites.",
                 anim: "fade-up-right",
               },
               {
-                icon: <FaCamera />,
-                title: "Photography",
-                desc: "Creating aesthetic and vivid product visuals.",
-                anim: "fade-up-left",
+                icon: <FaRobot />,
+                title: "Artificial Intelligence and Machine Learning",
+                desc: "Artificial Intelligence and Machine Learning to build smarter and more efficient web applications",
+                anim: "fade-up-right",
+                status: " Present I am Learning",
               },
             ].map((item, index) => (
               <div
@@ -139,6 +146,12 @@ const About = () => {
                 className="bg-[#1c1c1e] p-6 rounded-xl hover:border-yellow-400 border border-[#2a2a2a] transition duration-300"
                 data-aos={item.anim}
               >
+                {item.status == " Present I am Learning" ? (
+                  <span className="absolute top-3 right-4 text-sm bg-red-400 text-black px-3 py-1 rounded-full font-semibold">
+                    {item.status}
+                  </span>
+                ) : null}
+
                 <div className="text-yellow-400 text-2xl mb-2">{item.icon}</div>
                 <h3 className="text-white font-semibold mb-1">{item.title}</h3>
                 <p className="text-gray-400 text-sm">{item.desc}</p>
@@ -151,6 +164,8 @@ const About = () => {
             className="relative bg-[#1c1c1e] p-6 mt-6 rounded-xl hover:border-yellow-400 border border-[#2a2a2a] transition duration-300"
             data-aos="zoom-in"
           >
+            <div className="text-yellow-400 text-2xl mb-2">
+            </div>
             <span className="absolute top-3 right-4 text-sm bg-red-400 text-black px-3 py-1 rounded-full font-semibold">
               Present I am Learning
             </span>

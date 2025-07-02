@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Typewriter } from "react-simple-typewriter";
+
 import {
   FaEnvelope,
   FaPhone,
@@ -7,8 +9,9 @@ import {
   FaTimes,
   FaLinkedin,
   FaGithub,
+  FaLocationArrow,
 } from "react-icons/fa";
-
+import pic from "/Profie.jpg"
 const LeftSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +20,10 @@ const LeftSidebar = () => {
       {/* Mobile Header */}
       <div className="md:hidden flex justify-between items-center px-4 py-3 bg-[#1c1c1e] rounded-xl mb-4">
         <h1 className="text-xl font-bold text-white">Ravi Tharun</h1>
-        <button onClick={() => setIsOpen(!isOpen)} className="text-white text-3xl">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-white text-3xl"
+        >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
@@ -40,13 +46,37 @@ const LeftSidebar = () => {
           <div>
             <div className="flex flex-col items-center">
               <img
-                src="/avatar.png"
+                src={pic}
                 alt="Avatar"
-                className="w-28 h-28 rounded-full mb-4"
+                className="w-30 h-30 rounded-full mb-4"
               />
               <h2 className="text-2xl font-bold">Ravi Tharun</h2>
-              <span className="mt-1 text-base bg-[#333] px-3 py-1 rounded-full text-gray-300">
-                Web Developer
+              <span className="mt-1 text-base bg-[#333] px-3 py-1 rounded-full text-red-300">
+                <Typewriter
+                  words={[
+                    "Have a project in mind?",
+                    "Want to collaborate?",
+                    "Need a developer?",
+                    "Let's build something amazing!",
+                    "Turn your ideas into reality.",
+                    "Let’s work together!",
+                    "Got a startup idea?",
+                    "Building something cool?",
+                    "Your next big thing starts here.",
+                    "Drop me a message!",
+                    "React, Node, or MERN? I’m in!",
+                    "Frontend that feels great!",
+                    "Code it. Ship it. Repeat.",
+                    "Let's bring your vision to life.",
+                    "Clean code, solid UX, fast delivery.",
+                  ]}
+                  loop={true}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1500}
+                />
               </span>
             </div>
 
@@ -62,7 +92,7 @@ const LeftSidebar = () => {
                 <p className="text-sm text-gray-400 mb-1">Email</p>
                 <div className="flex items-center gap-3">
                   <FaEnvelope className="text-yellow-400 text-xl" />
-                  <span>tharunravi672@gmail.com</span>
+                  <span><a href="mailto:tharunravi672@gmail.com">tharunravi672@gmail.com</a></span>
                 </div>
               </div>
 
@@ -75,10 +105,10 @@ const LeftSidebar = () => {
               </div>
 
               <div>
-                <p className="text-sm text-gray-400 mb-1">Date of Birth</p>
+                <p className="text-sm text-gray-400 mb-1">Location</p>
                 <div className="flex items-center gap-3">
-                  <FaBirthdayCake className="text-pink-400 text-xl" />
-                  <span>June 23, 2003</span>
+                  <FaLocationArrow className="text-pink-400 text-xl" />
+                  <span>Bengaluru,Karnataka, India</span>
                 </div>
               </div>
             </div>
