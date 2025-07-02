@@ -11,7 +11,6 @@ import {
   FaGithub,
   FaLocationArrow,
 } from "react-icons/fa";
-import pic from "/Profie.jpg"
 const LeftSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -46,7 +45,7 @@ const LeftSidebar = () => {
           <div>
             <div className="flex flex-col items-center">
               <img
-                src={pic}
+                src="{pic}"
                 alt="Avatar"
                 className="w-30 h-30 rounded-full mb-4"
               />
