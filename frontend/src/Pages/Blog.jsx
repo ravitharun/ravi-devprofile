@@ -1,7 +1,6 @@
 import React from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
-import { Watch } from "react-loader-spinner";
 
 function Blog() {
   const page = "Blog";
@@ -39,16 +38,8 @@ function Blog() {
               ) : (
                 <div className="flex flex-col items-center justify-center min-h-[300px] bg-gray-900 rounded-xl shadow-md p-6 space-y-6">
                   {/* Loader */}
-                  <div className="animate-pulse">
-                    <Watch
-                      height="80"
-                      width="80"
-                      radius="48"
-                      color="#facc15"
-                      ariaLabel="watch-loading"
-                      visible={true}
-                    />
-                    
+                  <div className="flex justify-center items-center h-full w-full">
+                    <div className="w-12 h-12 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
                   </div>
 
                   {/* Message */}

@@ -153,7 +153,7 @@ function Contact() {
             )}
           </div>
           <>
-            <div className="bg-gray-800 p-5 rounded-xl text-center mt-8 shadow-lg p-3 ">
+            <div className="bg-gray-800 p-5 rounded-xl text-center mt-8 shadow-lg  ">
               <p className="text-gray-300">
                 Having trouble sending a message? You can also contact me
                 directly via email:
