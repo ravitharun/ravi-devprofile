@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <meta name="google-site-verification" content="google64e9e9010771d280.html" />
+        <meta name="google-site-verification" content="google64e9e9010771d280" />
       </Helmet>
        <Helmet>
         <title>Tharun Ravi | MERN Stack Developer</title>
