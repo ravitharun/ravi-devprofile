@@ -19,7 +19,9 @@ function Resume() {
     Aos.init({
       duration: 800,
       once: false,
-      disable: 'mobile'
+     disable: function () {
+  return window.innerWidth < 768; // disable if screen is below 768px
+}
     });
   }, []);
 

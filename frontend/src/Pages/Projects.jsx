@@ -21,7 +21,9 @@ function Projects() {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      disable: 'mobile',
+      disable: function () {
+        return window.innerWidth < 768; // disable if screen is below 768px
+      },
       once: false,
     });
   }, []);
@@ -109,7 +111,7 @@ function Projects() {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {PROJECTS.map((project, index) => (
             <div
-            data-aos={project.ani}
+              data-aos={project.ani}
               key={index}
               onClick={() => openModal(project)}
               className="cursor-pointer bg-[#1c1c1c] rounded-2xl shadow-md hover:shadow-blue-500/30 transition-shadow duration-300"
