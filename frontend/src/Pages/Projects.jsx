@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import {
@@ -13,10 +13,19 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import PROJECTS from "../Pages/projects.json";
 import ProjectsNavbar from "../Components/ProjectsNavbar";
 import Modal from "react-modal";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 Modal.setAppElement("#root"); // Important for accessibility
 
 function Projects() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      disable: 'mobile',
+      once: false,
+    });
+  }, []);
+
   const page = "Portfolio";
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -37,24 +46,28 @@ function Projects() {
       description:
         "Understanding client needs, business goals, and target audience to outline clear project objectives and deliverables.",
       icon: <FaClipboardList className="text-4xl text-blue-500" />,
+      ani: "fade-up",
     },
     {
       title: "2. Planning & Design",
       description:
         "Creating wireframes, user flows, and design mockups while defining the tech stack, timeline, and resource allocation.",
       icon: <FaPencilRuler className="text-4xl text-purple-500" />,
+      ani: "fade-left",
     },
     {
       title: "3. Development & Testing",
       description:
         "Building the application using clean, scalable code and performing continuous testing to ensure functionality and performance.",
       icon: <FaCode className="text-4xl text-green-500" />,
+      ani: "fade-left",
     },
     {
       title: "4. Deployment & Maintenance",
       description:
         "Launching the project to production, monitoring its performance, and providing ongoing updates, fixes, and improvements.",
       icon: <FaRocket className="text-4xl text-red-500" />,
+      ani: "fade-up",
     },
   ];
 
@@ -73,6 +86,7 @@ function Projects() {
             {projects_approach.map((item, index) => (
               <div
                 key={index}
+                data-aos={item.ani}
                 className="bg-[#1c1c1c] p-6 rounded-2xl shadow-md hover:shadow-blue-500/30 transition-shadow duration-300 flex gap-4 items-start"
               >
                 <div>{item.icon}</div>
@@ -95,6 +109,7 @@ function Projects() {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {PROJECTS.map((project, index) => (
             <div
+            data-aos={project.ani}
               key={index}
               onClick={() => openModal(project)}
               className="cursor-pointer bg-[#1c1c1c] rounded-2xl shadow-md hover:shadow-blue-500/30 transition-shadow duration-300"

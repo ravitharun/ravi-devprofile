@@ -17,8 +17,9 @@ function Resume() {
 
   useEffect(() => {
     Aos.init({
-      duration: 1000,
+      duration: 800,
       once: false,
+      disable: 'mobile'
     });
   }, []);
 
