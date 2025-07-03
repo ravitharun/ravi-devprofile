@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import axios from "axios";
+import ScrollIndicator from "../Components/ScrollIndicator";
 function Contact() {
   const page = "Contact";
   const [name, setName] = useState("");
@@ -62,7 +63,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row overflow-x-hidden">
+    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
       {/* Sidebar */}
       <LeftSidebar />
 
@@ -153,6 +154,7 @@ function Contact() {
             )}
           </div>
           <>
+                  <ScrollIndicator />
             <div className="bg-gray-800 p-5 rounded-xl text-center mt-8 shadow-lg  ">
               <p className="text-gray-300">
                 Having trouble sending a message? You can also contact me

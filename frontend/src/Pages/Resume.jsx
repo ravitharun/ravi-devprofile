@@ -10,8 +10,9 @@ import { MdSchool } from "react-icons/md";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import MYResume from "../assets/Ravi_Tharun_FullStack_Developer_Resume.pdf";
 import { Link } from "react-router-dom";
+import ResumeButton from "../Components/ResumeButton";
+import ScrollIndicator from "../Components/ScrollIndicator";
 function Resume() {
   const page = "Resume";
 
@@ -19,9 +20,9 @@ function Resume() {
     Aos.init({
       duration: 800,
       once: false,
-     disable: function () {
-  return window.innerWidth < 768; // disable if screen is below 768px
-}
+      disable: function () {
+        return window.innerWidth < 768; // disable if screen is below 768px
+      },
     });
   }, []);
 
@@ -92,10 +93,10 @@ function Resume() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row overflow-x-hidden">
+    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
       {/* Sidebar */}
       <LeftSidebar />
-
+        <ScrollIndicator /> 
       {/* Main Content */}
       <div className="flex-1 p-4 sm:p-6 md:p-8">
         <Navbar page={page} />
@@ -107,13 +108,8 @@ function Resume() {
             expertise? Download my resume to explore my skills and experience in
             detail."
           </p>
-          <a
-            href={MYResume}
-            download
-            className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-md hover:scale-105 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300"
-          >
-            📄 Download My Resume
-          </a>
+
+          <ResumeButton />
         </div>
         {/* Education Section */}
         <h2 className="text-3xl font-bold mb-6 text-center md:text-left">

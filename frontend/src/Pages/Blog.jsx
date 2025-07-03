@@ -1,13 +1,14 @@
 import React from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
+import ScrollIndicator from "../Components/ScrollIndicator";
 
 function Blog() {
   const page = "Blog";
   const blogPosts = [];
   return (
     <>
-      <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row overflow-x-hidden">
+      <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
         {/* Sidebar */}
         <LeftSidebar />
 
@@ -41,7 +42,7 @@ function Blog() {
                   <div className="flex justify-center items-center h-full w-full">
                     <div className="w-12 h-12 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
                   </div>
-
+        <ScrollIndicator />
                   {/* Message */}
                   <p className="text-yellow-400 text-center text-lg font-medium">
                     🚧 Blog section is currently under update.

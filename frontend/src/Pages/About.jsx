@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollIndicator from "../Components/ScrollIndicator";
 
 const About = () => {
   useEffect(() => {
@@ -20,10 +21,10 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row overflow-x-hidden">
+    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
       {/* Sidebar (mobile toggle handled inside LeftSidebar component) */}
       <LeftSidebar />
-
+      <ScrollIndicator />
       {/* Main Content */}
       <div className="flex-1 p-4 md:p-8">
         <Navbar />
@@ -64,7 +65,8 @@ const About = () => {
               <span className="text-xl">🎓</span>
               <p>
                 <span className="font-semibold text-white">2022:</span> Started
-                my Computer Science journey at Dayananda Sagar University.
+                my Computer Science journey at{" "}
+                <b className="text-amber-500">Dayananda Sagar University</b>.
               </p>
             </div>
             <div className="flex items-start gap-3">
@@ -164,8 +166,7 @@ const About = () => {
             className="relative bg-[#1c1c1e] p-6 mt-6 rounded-xl hover:border-yellow-400 border border-[#2a2a2a] transition duration-300"
             data-aos="zoom-in"
           >
-            <div className="text-yellow-400 text-2xl mb-2">
-            </div>
+            <div className="text-yellow-400 text-2xl mb-2"></div>
             <span className="absolute top-3 right-4 text-sm bg-red-400 text-black px-3 py-1 rounded-full font-semibold">
               Present I am Learning
             </span>

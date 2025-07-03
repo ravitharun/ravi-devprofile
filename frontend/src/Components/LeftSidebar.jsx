@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
-
 import {
   FaEnvelope,
   FaPhone,
@@ -11,18 +10,24 @@ import {
   FaGithub,
   FaLocationArrow,
 } from "react-icons/fa";
-import pic from "../Pages/Profie.jpg"
+import pic from "../Pages/Profie.jpg";
+import ResumeButton from "./ResumeButton";
+
 const LeftSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       {/* Mobile Header */}
-      <div className="md:hidden flex justify-between items-center px-4 py-3 bg-[#1c1c1e] rounded-xl mb-4">
+      <div
+        className="md:hidden flex justify-between items-center px-4 py-3 bg-[#1c1c1e] rounded-xl mb-4"
+        title="Toggle sidebar menu"
+      >
         <h1 className="text-xl font-bold text-white">Ravi Tharun</h1>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-white text-3xl"
+          title="Toggle sidebar menu"
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -40,6 +45,7 @@ const LeftSidebar = () => {
       <div
         className={`fixed md:static z-40 md:z-auto top-0 left-0 w-64 md:w-[270px] h-screen md:h-screen bg-[#1c1c1e] text-white transform transition-transform duration-300
         ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
+        title="Navigation sidebar"
       >
         <div className="flex flex-col justify-between h-full overflow-y-auto p-6">
           {/* Profile Top Section */}
@@ -49,9 +55,13 @@ const LeftSidebar = () => {
                 src={pic}
                 alt="Avatar"
                 className="w-30 h-30 rounded-full mb-4"
+                title="Ravi Tharun - Full Stack Developer"
               />
               <h2 className="text-2xl font-bold">Ravi Tharun</h2>
-              <span className="mt-1 text-base bg-[#333] px-3 py-1 rounded-full text-red-300">
+              <span
+                className="mt-1 text-base bg-[#333] px-3 py-1 rounded-full text-red-300"
+                title="Motivational taglines about collaboration"
+              >
                 <Typewriter
                   words={[
                     "Have a project in mind?",
@@ -80,10 +90,14 @@ const LeftSidebar = () => {
               </span>
             </div>
 
+            <div title="Download my resume (PDF)">
+              <ResumeButton />
+            </div>
+
             <hr className="my-6 border-gray-700" />
 
             {/* Contact Info */}
-            <div className="space-y-6 text-base">
+            <div className="space-y-6 text-base" title="Ways to get in touch with me">
               <h3 className="text-lg text-yellow-400 font-semibold mb-2">
                 Contact Info
               </h3>
@@ -92,7 +106,14 @@ const LeftSidebar = () => {
                 <p className="text-sm text-gray-400 mb-1">Email</p>
                 <div className="flex items-center gap-3">
                   <FaEnvelope className="text-yellow-400 text-xl" />
-                  <span><a href="mailto:tharunravi672@gmail.com">tharunravi672@gmail.com</a></span>
+                  <span>
+                    <a
+                      href="mailto:tharunravi672@gmail.com"
+                      title="Send me an email"
+                    >
+                      tharunravi672@gmail.com
+                    </a>
+                  </span>
                 </div>
               </div>
 
@@ -100,7 +121,7 @@ const LeftSidebar = () => {
                 <p className="text-sm text-gray-400 mb-1">Phone</p>
                 <div className="flex items-center gap-3">
                   <FaPhone className="text-green-400 text-xl" />
-                  <span>+91 7396994383</span>
+                  <span title="Call or WhatsApp me">+91 7396994383</span>
                 </div>
               </div>
 
@@ -108,7 +129,9 @@ const LeftSidebar = () => {
                 <p className="text-sm text-gray-400 mb-1">Location</p>
                 <div className="flex items-center gap-3">
                   <FaLocationArrow className="text-pink-400 text-xl" />
-                  <span>Bengaluru,Karnataka, India</span>
+                  <span title="Based in Bengaluru, Karnataka, India">
+                    Bengaluru, Karnataka, India
+                  </span>
                 </div>
               </div>
             </div>
@@ -116,7 +139,7 @@ const LeftSidebar = () => {
             <hr className="my-6 border-gray-700" />
 
             {/* Social Links */}
-            <div>
+            <div title="Find me on social platforms">
               <h3 className="text-lg text-blue-400 font-semibold mb-3">
                 Social Profiles
               </h3>
@@ -126,6 +149,7 @@ const LeftSidebar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:text-blue-300 text-2xl"
+                  title="Visit my LinkedIn profile"
                 >
                   <FaLinkedin />
                 </a>
@@ -134,6 +158,7 @@ const LeftSidebar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white text-2xl"
+                  title="Check out my GitHub projects"
                 >
                   <FaGithub />
                 </a>
@@ -142,7 +167,10 @@ const LeftSidebar = () => {
           </div>
 
           {/* Footer */}
-          <div className="text-xs text-center text-gray-500 mt-6">
+          <div
+            className="text-xs text-center text-gray-500 mt-6"
+            title="Portfolio of Ravi Tharun"
+          >
             &copy; {new Date().getFullYear()} Ravi Tharun
           </div>
         </div>
@@ -152,6 +180,7 @@ const LeftSidebar = () => {
           <button
             className="absolute top-4 right-4 text-white text-3xl md:hidden"
             onClick={() => setIsOpen(false)}
+            title="Toggle sidebar menu"
           >
             <FaTimes />
           </button>

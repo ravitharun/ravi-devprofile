@@ -41,14 +41,14 @@
       "/images/protifilo1.png",
       "/images/protifilo2.png"
     ],
-    "ani": "fade-up",
+    "ani": "zoom-in",
     "isFeatured": true,
     "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
     "ProjectType": "Web"
   },
   {
     "id": 2,
-    "ani": "fade-up",
+    "ani": "zoom-in",
     "title": "Recipe Finder App",
     "description": "A React-based web application that allows users to search for recipes using ingredients with a simple and attractive UI.",
     "techStack": [
@@ -93,7 +93,7 @@
   },
   {
     "id": 3,
-    "ani": "fade-up",
+    "ani": "zoom-in",
     "title": "Job Finder Platform",
     "description": "A job search platform built using React and the Remotive API to help frontend developers find remote jobs with filters.",
     "techStack": [
@@ -146,7 +146,7 @@
       "Tailwind CSS",
       "JavaScript"
     ],
-    "ani":"fade-up"  ,
+    "ani":"zoom-in"  ,
     "images": [
       "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
       "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
@@ -241,6 +241,6 @@
     ],
     "isFeatured": true,
     "ProjectType": "Web",
-    "ani": "fade-up"
+    "ani": "zoom-in"
   }
 ]

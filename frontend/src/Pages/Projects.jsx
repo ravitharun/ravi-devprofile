@@ -15,6 +15,7 @@ import ProjectsNavbar from "../Components/ProjectsNavbar";
 import Modal from "react-modal";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollIndicator from "../Components/ScrollIndicator";
 Modal.setAppElement("#root"); // Important for accessibility
 
 function Projects() {
@@ -74,7 +75,7 @@ function Projects() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row">
+    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
       <LeftSidebar />
       <div className="flex-1 p-4 md:p-8">
         <Navbar page={page} />
@@ -105,7 +106,7 @@ function Projects() {
         <h2 className="text-3xl font-bold mb-6 border-b border-gray-700 pb-2 flex items-center gap-2">
           <FaArrowAltCircleRight /> Project Cards
         </h2>
-
+        <ScrollIndicator />
         <ProjectsNavbar />
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
