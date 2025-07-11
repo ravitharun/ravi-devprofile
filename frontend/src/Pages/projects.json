@@ -57,9 +57,10 @@
       "Edamam API"
     ],
     "images": [
-      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
-      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
-      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+      "https://tse3.mm.bing.net/th/id/OIP.3hgKzbquQzPniOyTuovd0AHaHa?pid=Api&P=0&h=180",
+      "https://tse3.mm.bing.net/th/id/OIP.3hgKzbquQzPniOyTuovd0AHaHa?pid=Api&P=0&h=180",
+      "https://tse3.mm.bing.net/th/id/OIP.3hgKzbquQzPniOyTuovd0AHaHa?pid=Api&P=0&h=180"
+      
     ],
     "tools": [
       "GitHub",
@@ -70,7 +71,7 @@
       "Recipe details",
       "Responsive UI"
     ],
-    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+    "thumbnil": "https://tse3.mm.bing.net/th/id/OIP.3hgKzbquQzPniOyTuovd0AHaHa?pid=Api&P=0&h=180",
     "role": "Frontend Developer",
     "type": "Personal Project",
     "tags": [
@@ -86,7 +87,7 @@
     "githubLink": "https://github.com/ravitharun/React-Recipe-Finder",
     "videoDemo": "https://youtu.be/recipe-demo",
     "screenshots": [
-      "/images/recipe1.png"
+      "/images/pic.png"
     ],
     "isFeatured": false,
     "ProjectType": "Web"
@@ -117,13 +118,13 @@
       "Card-based layout"
     ],
     "role": "Frontend Developer",
-    "type": "Freelance Project",
+    "type": "Personal Project",
     "tags": [
       "Job Portal",
       "API",
       "React"
     ],
-    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+    "thumbnil": "https://tse2.mm.bing.net/th/id/OIP.ROZmanJPcqNJdygki44N3wAAAA?pid=Api&P=0&h=180",
     "startDate": "2025-01-01",
     "endDate": "2025-01-20",
     "duration": "20 days",
@@ -146,7 +147,7 @@
       "Tailwind CSS",
       "JavaScript"
     ],
-    "ani":"zoom-in"  ,
+    "ani": "zoom-in",
     "images": [
       "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
       "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
@@ -168,7 +169,7 @@
       "Player",
       "React"
     ],
-    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.SWdXYplrf8UtwTY9Sk2OgwHaD4?pid=Api&P=0&h=180",
     "startDate": "2024-06-10",
     "endDate": "2024-06-30",
     "duration": "20 days",
@@ -241,6 +242,54 @@
     ],
     "isFeatured": true,
     "ProjectType": "Web",
+    "ani": "zoom-in"
+  },
+  {
+    "id": 6,
+    "title": "Heart Disease  Prediction",
+    "description": "This project utilizes a Logistic Regression model to predict the likelihood of Heart Disease based on various key medical indicators. The input features include age, sex, chest pain type (cp), resting blood pressure (trestbps), serum cholesterol levels, fasting blood sugar, maximum heart rate achieved (thalach), exercise-induced angina, ST depression (oldpeak), and more. The model outputs a simple result: Yes (if the patient is likely to have heart disease) or No (if not), helping demonstrate predictive modeling in healthcare scenarios.",
+    "techStack": [
+      "Machine Learning",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "tools": [
+      "GitHub"
+    ],
+    "images": [
+      "Imgaes frontend/src/assets/pic1.png",
+      "Imgaes frontend/src/assets/pic2.png",
+      "Imgaes frontend/src/assets/pic3.png",
+      "Imgaes frontend/src/assets/pic4.png"
+    ],
+    "features": [
+      "Easily input values using interactive sliders for key medical attributes.",
+      "The model evaluates the entered features and returns a simple prediction: Yes (1) if the person is likely to have heart disease, or No (0) if not."
+    ],
+    "role": "Ai & Ml",
+    "type": "Learning Project",
+    "tags": [
+      "Ai",
+      "medical ",
+      "ML",
+      "Dataset",
+      "Heart Disease"
+    ],
+    "thumbnil": "https://tse1.mm.bing.net/th/id/OIP.m3ap_MLgbjV3N-aCrE4svAHaCQ?pid=Api&P=0&h=180",
+    "startDate": "2025-07-11",
+    "endDate": "2025-07-11",
+    "duration": "2 Hours",
+    "status": "Completed",
+    "liveLink": "",
+    "githubLink": "https://github.com/ravitharun/ml-heart-risk-predictor",
+    "videoDemo": "https://youtu.be/lms-demo",
+    "screenshots": [
+      "/images/lms1.png",
+      "/images/lms2.png"
+    ],
+    "isFeatured": true,
+    "ProjectType": "Ai & Ml",
     "ani": "zoom-in"
   }
 ]

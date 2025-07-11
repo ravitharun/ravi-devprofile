@@ -72,6 +72,7 @@ function Resume() {
     "Figma",
     "Responsive Design",
     "UI/UX",
+    'Streamlit'
   ];
   const Server_Script = [
     "Node.js",

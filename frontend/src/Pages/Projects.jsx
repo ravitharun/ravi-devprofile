@@ -103,10 +103,11 @@ function Projects() {
         </section>
 
         {/* Project Cards Section */}
-        <h2 className="text-3xl font-bold mb-6 border-b border-gray-700 pb-2 flex items-center gap-2">
-          <FaArrowAltCircleRight /> Project Cards
-        </h2>
+        <h4 className="text-3xl font-bold mb-6 border-b border-gray-900 pb-2 flex items-center gap-2">
+          <FaArrowAltCircleRight /> Project's
+        </h4>
         <ScrollIndicator />
+        <br/>
         <ProjectsNavbar />
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
@@ -118,7 +119,7 @@ function Projects() {
               className="cursor-pointer bg-[#1c1c1c] rounded-2xl shadow-md hover:shadow-blue-500/30 transition-shadow duration-300"
             >
               <img
-                src={project.images[0]}
+                src={project.thumbnil}
                 alt={project.title}
                 className="w-full h-48 object-cover rounded-t-2xl"
               />
