@@ -5,7 +5,30 @@ import ScrollIndicator from "../Components/ScrollIndicator";
 
 function Blog() {
   const page = "Blog";
-  const blogPosts = [];
+  const blogPosts = [
+    {
+      title: "My Portfolio Journey",
+      description:
+        "Sharing how I designed and built my personal website using React.",
+      content: "Full blog post goes here...",
+      date: "2025-07-12",
+      author: "Ravi Tharun",
+      image:
+        "https://tse1.mm.bing.net/th/id/OIP.WyHNnNNg4sCNZ5LhoZ5DEAHaE8?pid=Api&P=0&h=180",
+      slug: "my-portfolio-journey",
+    },
+    {
+      title: "Learning AI Step-by-Step",
+      description:
+        "A beginner-friendly path I followed to get started with AI and ML.",
+      content: "Full blog post content here...",
+      date: "2025-06-30",
+      author: "Ravi Tharun",
+      image:
+        "https://tse2.mm.bing.net/th/id/OIP.WCqK6XavZC3o_vWbiDsfxQHaE8?pid=Api&P=0&h=180",
+      slug: "learning-ai-step-by-step",
+    },
+  ];
   return (
     <>
       <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
@@ -17,38 +40,49 @@ function Blog() {
           <Navbar page={page} />
 
           <div className="min-h-screen bg-[#0f0f0f] text-white px-6 py-12">
-            <h1 className="text-4xl font-bold text-yellow-400 mb-10 text-center"></h1>
+            <div className="max-w-7xl mx-auto px-4">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                Latest Blog Posts
+              </h2>
 
-            <div className="max-w-4xl mx-auto space-y-6">
               {blogPosts.length > 0 ? (
-                blogPosts.map((post) => (
-                  <div
-                    key={post.id}
-                    className="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-yellow-400 transition"
-                  >
-                    <h2 className="text-2xl font-semibold text-yellow-300 mb-2">
-                      {post.title}
-                    </h2>
-                    <p className="text-sm text-gray-400 mb-4">{post.date}</p>
-                    <p className="text-gray-300">{post.summary}</p>
-                    <button className="mt-4 text-yellow-400 hover:underline text-sm">
-                      Read More →
-                    </button>
-                  </div>
-                ))
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {blogPosts.map((post) => (
+                    <div
+                      key={post.id}
+                      className="bg-[#1c1c1e] rounded-xl overflow-hidden shadow-lg transition duration-300"
+                    >
+                      {post.image && (
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-48 object-cover"
+                        />
+                      )}
+                      <div className="p-6 flex flex-col h-full justify-between">
+                        <div>
+                          <h3 className="text-xl font-bold text-white mb-2">
+                            {post.title}
+                          </h3>
+                          <p className="text-sm text-gray-400 mb-4">
+                            {post.date}
+                          </p>
+                          <p className="text-gray-300 text-sm line-clamp-3">
+                            {post.description}
+                          </p>
+                        </div>
+                        <div className="mt-4">
+                          <button className="text-yellow-400 hover:text-yellow-500 text-sm font-medium hover:underline">
+                            Read More →
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               ) : (
-                <div className="flex flex-col items-center justify-center min-h-[300px] bg-gray-900 rounded-xl shadow-md p-6 space-y-6">
-                  {/* Loader */}
-                  <div className="flex justify-center items-center h-full w-full">
-                    <div className="w-12 h-12 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
-                  </div>
-        <ScrollIndicator />
-                  {/* Message */}
-                  <p className="text-yellow-400 text-center text-lg font-medium">
-                    🚧 Blog section is currently under update.
-                    <br />
-                    Please check back later.
-                  </p>
+                <div className="text-center text-yellow-400">
+                  🚧 Blog section coming soon...
                 </div>
               )}
             </div>

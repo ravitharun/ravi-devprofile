@@ -114,7 +114,8 @@ const About = () => {
 
         {/* What I'm Doing Section */}
         <div className="mt-8">
-          <h2 className="text-xl font-bold mb-6">What I'm Doing</h2>
+          <h2 className="text-xl font-bold mb-6">    My Services
+</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
               {
