@@ -16,6 +16,7 @@ import Modal from "react-modal";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollIndicator from "../Components/ScrollIndicator";
+import { Link } from "react-router-dom";
 Modal.setAppElement("#root"); // Important for accessibility
 
 function Projects() {
@@ -107,7 +108,7 @@ function Projects() {
           <FaArrowAltCircleRight /> Project's
         </h4>
         <ScrollIndicator />
-        <br/>
+        <br />
         <ProjectsNavbar />
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
@@ -277,35 +278,39 @@ function Projects() {
                 <h3 className="text-lg font-semibold mb-2 text-blue-400">
                   Video Demo
                 </h3>
-                <div className="rounded-lg overflow-hidden shadow-lg border border-gray-700">
-                  <video
-                    className="w-full h-64 object-cover"
-                    src="https://www.youtube.com/watch?v=gxHXPmePnvo"
-                    controls
-                  />
+                <div className=" overflow-hidden shadow-lg border border-gray-800">
+                  {selectedProject.videoDemo ===
+                  "https://www.youtube.com/watch?v=gxHXPmePnvo" ? (
+                    <div className="text-center font-mono text-gray-400 p-4 cursor-not-allowed">
+                      <p>Video demo will be available within 2 days.</p>
+                    </div>
+                  ) : (
+                    selectedProject.videoDemo
+                  )}
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-4 mt-6">
-                <a
-                  href={selectedProject.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 cursor-pointer text-white text-sm font-medium px-4 py-2 rounded-lg transition duration-300"
-                >
-                  <FaGithub className="text-lg" />
-                  GitHub
-                </a>
-
-                <a
-                  href={selectedProject.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-gray-700 cursor-pointer text-white text-sm font-medium px-4 py-2 rounded-lg transition duration-300"
-                >
-                  <FaExternalLinkAlt className="text-sm" />
-                  Live Demo
-                </a>
+                <Link to={selectedProject.githubLink}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 cursor-pointer text-white text-sm font-medium px-4 py-2 rounded-lg transition duration-300"
+                  >
+                    <FaGithub className="text-lg" />
+                    GitHub
+                  </a>
+                </Link>
+                <Link to={selectedProject.liveLink}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-gray-700 cursor-pointer text-white text-sm font-medium px-4 py-2 rounded-lg transition duration-300"
+                  >
+                    <FaExternalLinkAlt className="text-sm" />
+                    Live Demo
+                  </a>
+                </Link>
               </div>
 
               {/* Close Button */}
