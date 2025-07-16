@@ -8,6 +8,7 @@
       "Tailwind CSS",
       "Framer Motion"
     ],
+    "outcomes": [],
     "images": [
       "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
       "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
@@ -41,12 +42,12 @@
       "/images/protifilo1.png",
       "/images/protifilo2.png"
     ],
+    "outcomes": [],
     "ani": "zoom-in",
     "isFeatured": true,
     "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
     "ProjectType": "Web"
   },
- 
   {
     "id": 3,
     "ani": "zoom-in",
@@ -79,6 +80,7 @@
       "API",
       "React"
     ],
+    "outcomes": [],
     "thumbnil": "https://tse2.mm.bing.net/th/id/OIP.ROZmanJPcqNJdygki44N3wAAAA?pid=Api&P=0&h=180",
     "startDate": "2025-01-01",
     "endDate": "2025-01-20",
@@ -93,7 +95,6 @@
     "isFeatured": true,
     "ProjectType": "Web"
   },
- 
   {
     "id": 5,
     "title": "College LMS System",
@@ -104,6 +105,7 @@
       "Express",
       "MongoDB"
     ],
+    "outcomes": [],
     "tools": [
       "Postman",
       "Vercel",
@@ -157,6 +159,15 @@
   {
     "id": 6,
     "title": "Heart Disease  Prediction",
+    "outcomes": [
+      "Built a Logistic Regression model to predict heart disease using medical data.",
+      "Created a simple interface for users to enter medical info and see predictions.",
+      "Learned how to read data from a CSV file and train a machine learning model.",
+      "Understood how to clean and use datasets in a project.",
+      "Gained experience in deploying a machine learning model with a Node.js backend.",
+      "Practiced using Logistic Regression and training it with real data.",
+      "Got a basic idea of how machine learning is used in real-world projects."
+    ],
     "description": "This project utilizes a Logistic Regression model to predict the likelihood of Heart Disease based on various key medical indicators. The input features include age, sex, chest pain type (cp), resting blood pressure (trestbps), serum cholesterol levels, fasting blood sugar, maximum heart rate achieved (thalach), exercise-induced angina, ST depression (oldpeak), and more. The model outputs a simple result: Yes (if the patient is likely to have heart disease) or No (if not), helping demonstrate predictive modeling in healthcare scenarios.",
     "techStack": [
       "Machine Learning",

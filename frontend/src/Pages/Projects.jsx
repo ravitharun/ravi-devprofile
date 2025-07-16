@@ -16,10 +16,14 @@ import Modal from "react-modal";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollIndicator from "../Components/ScrollIndicator";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 Modal.setAppElement("#root"); // Important for accessibility
 
 function Projects() {
+  const location = useLocation();
+  const Projects_Web = location.state || PROJECTS; // fallback
+  console.log(Projects_Web, "Projects_Web");
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -29,11 +33,9 @@ function Projects() {
       once: false,
     });
   }, []);
-
   const page = "Portfolio";
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-
   const openModal = (project) => {
     setSelectedProject(project);
     setModalIsOpen(true);
@@ -43,7 +45,6 @@ function Projects() {
     setModalIsOpen(false);
     setSelectedProject(null);
   };
-
   const projects_approach = [
     {
       title: "1. Requirement Gathering",
@@ -112,30 +113,43 @@ function Projects() {
         <ProjectsNavbar />
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {PROJECTS.map((project, index) => (
-            <div
-              data-aos={project.ani}
-              key={index}
-              onClick={() => openModal(project)}
-              className="cursor-pointer bg-[#1c1c1c] rounded-2xl shadow-md hover:shadow-blue-500/30 transition-shadow duration-300"
-            >
-              <img
-                src={project.thumbnil}
-                alt={project.title}
-                className="w-full h-48 object-cover rounded-t-2xl"
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold mb-1">{project.title}</h2>
-                <p className="text-sm text-gray-400 mb-2">
-                  {project.description}
-                </p>
-                <p className="text-sm">
-                  <span className="font-semibold text-blue-500">Type:</span>{" "}
-                  <span className="text-amber-400">{project.ProjectType}</span>
-                </p>
+          {Projects_Web.length > 0 ? (
+            Projects_Web.map((project, index) => (
+              <div
+                data-aos={project.ani}
+                key={index}
+                onClick={() => openModal(project)}
+                className="cursor-pointer bg-[#1c1c1c] rounded-2xl shadow-md hover:shadow-blue-500/30 transition-shadow duration-300"
+              >
+                <img
+                  src={project.thumbnil}
+                  alt={project.title}
+                  className="w-full h-48 object-cover rounded-t-2xl"
+                />
+                <div className="p-4">
+                  <h2 className="text-xl font-semibold mb-1">
+                    {project.title}
+                  </h2>
+                  <p className="text-sm text-gray-400 mb-2">
+                    {project.description}
+                  </p>
+                  <p className="text-sm">
+                    <span className="font-semibold text-blue-500">Type:</span>{" "}
+                    <span className="text-amber-400">
+                      {project.ProjectType}
+                    </span>
+                  </p>
+                </div>
               </div>
+            ))
+          ) : (
+            <div className="col-span-full flex justify-center mt-3">
+              <p className="px-6 py-3 bg-gray-900 text-blue-400 rounded-xl border border-blue-700 shadow-lg font-mono text-base text-center">
+                🚧 Adding soon! Available within{" "}
+                <span className="text-amber-400 font-semibold">24 Hr's</span>
+              </p>
             </div>
-          ))}
+          )}
         </div>
 
         {/* Modal with Card UI */}
@@ -274,6 +288,20 @@ function Projects() {
                   </span>
                 </p>
               </div>
+              <div>
+                <p className="font-mono text-blue-500">Outcomes : </p>
+                {selectedProject.outcomes.length > 0 ? (
+                  <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
+                    {selectedProject.outcomes.map((outcome, index) => (
+                      <li key={index}>{outcome}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-gray-500 font-stretch-75% border-2 border-gray-800 p-4 text-center">
+                    Adding Soon!
+                  </p>
+                )}
+              </div>
               <div className="mt-6">
                 <h3 className="text-lg font-semibold mb-2 text-blue-400">
                   Video Demo
@@ -285,7 +313,9 @@ function Projects() {
                       <p>Video demo will be available within 2 days.</p>
                     </div>
                   ) : (
-                    selectedProject.videoDemo
+                    <div className="text-center font-mono text-gray-400 p-4 cursor-not-allowed">
+                      <p>Video demo will be available within 2 days.</p>
+                    </div>
                   )}
                 </div>
               </div>
