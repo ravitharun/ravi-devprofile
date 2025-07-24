@@ -11,12 +11,14 @@ import Projects from "./Pages/Projects.jsx";
 import Resume from "./Pages/Resume.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Certifications from "./Pages/Certifications.jsx";
+import Home from "./Pages/Home.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<About />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/portfolio" element={<Projects />} />
         <Route path="/Certifications" element={<Certifications />} />

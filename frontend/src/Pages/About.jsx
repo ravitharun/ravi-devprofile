@@ -1,13 +1,8 @@
 import React, { useEffect } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
-import {
-  FaCode,
-  FaPaintBrush,
-  FaMobileAlt,
-  FaCamera,
-  FaRobot,
-} from "react-icons/fa";
+import { FaCode, FaPaintBrush, FaMobileAlt, FaRobot } from "react-icons/fa";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollIndicator from "../Components/ScrollIndicator";
@@ -21,11 +16,9 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
-      {/* Sidebar (mobile toggle handled inside LeftSidebar component) */}
-      <LeftSidebar />
+    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8" >
+      <LeftSidebar  />
       <ScrollIndicator />
-      {/* Main Content */}
       <div className="flex-1 p-4 md:p-8">
         <Navbar />
 
@@ -35,20 +28,23 @@ const About = () => {
             About Me
           </h1>
           <p className="text-gray-400">
-            Hello! I'm Ravi Tharun, a passionate Full Stack Web Developer based
-            in Bangalore, India. I specialize in building modern, responsive web
-            applications using technologies like React, Node.js, and MongoDB.
+            Hello! I’m Ravi Tharun, a dedicated Full Stack Web Developer based
+            in Bangalore, India. I specialize in building modern, scalable, and
+            responsive web applications using technologies such as React,
+            Node.js, and MongoDB.
           </p>
           <p className="text-gray-400">
-            I have a strong interest in UI/UX design and strive to create
-            visually appealing, user-friendly interfaces. My goal is to craft
-            experiences that are not just functional, but also delightful to
-            interact with.
+            With a strong passion for UI/UX design, I focus on creating clean,
+            intuitive, and user-centric interfaces that enhance the overall user
+            experience. My design approach combines functionality with
+            aesthetics to deliver impactful digital solutions.
           </p>
           <p className="text-gray-400">
-            I'm constantly learning and exploring new tools in web development,
-            including AI integrations and performance optimization. Let’s build
-            something amazing together!
+            I’m continuously learning and exploring new technologies in web
+            development, including AI integration, performance optimization, and
+            modern development practices. I'm enthusiastic about collaborating
+            on meaningful projects and delivering high-quality products that
+            make a difference.
           </p>
         </div>
 
@@ -114,8 +110,7 @@ const About = () => {
 
         {/* What I'm Doing Section */}
         <div className="mt-8">
-          <h2 className="text-xl font-bold mb-6">    My Services
-</h2>
+          <h2 className="text-xl font-bold mb-6"> My Services</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
               {
@@ -139,21 +134,21 @@ const About = () => {
               {
                 icon: <FaRobot />,
                 title: "Artificial Intelligence and Machine Learning",
-                desc: "Artificial Intelligence and Machine Learning to build smarter and more efficient web applications",
+                desc: "Building smarter and more efficient web applications.",
                 anim: "fade-up-right",
                 status: " Present I am Learning",
               },
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-[#1c1c1e] p-6 rounded-xl hover:border-yellow-400 border border-[#2a2a2a] transition duration-300"
+                className="bg-[#1c1c1e] p-6 rounded-xl hover:border-yellow-400 border border-[#2a2a2a] transition duration-300 relative"
                 data-aos={item.anim}
               >
-                {item.status == " Present I am Learning" ? (
+                {item.status && (
                   <span className="absolute top-3 right-4 text-sm bg-red-400 text-black px-3 py-1 rounded-full font-semibold">
                     {item.status}
                   </span>
-                ) : null}
+                )}
 
                 <div className="text-yellow-400 text-2xl mb-2">{item.icon}</div>
                 <h3 className="text-white font-semibold mb-1">{item.title}</h3>
@@ -162,12 +157,10 @@ const About = () => {
             ))}
           </div>
 
-          {/* Learning Badge */}
           <div
             className="relative bg-[#1c1c1e] p-6 mt-6 rounded-xl hover:border-yellow-400 border border-[#2a2a2a] transition duration-300"
             data-aos="zoom-in"
           >
-            <div className="text-yellow-400 text-2xl mb-2"></div>
             <span className="absolute top-3 right-4 text-sm bg-red-400 text-black px-3 py-1 rounded-full font-semibold">
               Present I am Learning
             </span>

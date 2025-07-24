@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { name: "About", href: "/", active: true },
+  { name: "About", href: "/about", active: true },
   { name: "Resume", href: "/resume" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Certifications", href: "/Certifications" },

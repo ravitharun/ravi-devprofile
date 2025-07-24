@@ -249,6 +249,24 @@ function Projects() {
                     {selectedProject.duration}
                   </span>
                 </div>
+                <div className="text-sm flex flex-wrap gap-1">
+                  <span className="font-semibold text-blue-500 mr-1">
+                    Tools:
+                  </span>
+                  <span className="text-amber-400">
+                    {selectedProject.tools
+                      .flatMap((tool) => tool.split(","))
+                      .map((tool, index) => (
+                        <span key={index}>
+                          {tool.trim()}
+                          {index !==
+                            selectedProject.tools.flatMap((t) => t.split(","))
+                              .length -
+                              1 && ","}{" "}
+                        </span>
+                      ))}
+                  </span>
+                </div>
 
                 {/* Role */}
                 <div className="text-sm">
