@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import {
   FaEnvelope,
   FaPhone,
-  FaBirthdayCake,
   FaBars,
   FaTimes,
   FaLinkedin,
@@ -12,16 +11,23 @@ import {
 } from "react-icons/fa";
 import pic from "../Pages/Profie.jpg";
 import ResumeButton from "./ResumeButton";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const LeftSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
   return (
     <>
       {/* Mobile Header */}
       <div
-        className="md:hidden flex justify-between items-center px-4 py-3 bg-[#1c1c1e] rounded-xl mb-4"
+        className="md:hidden flex justify-between items-center px-5 py-3 bg-[#1c1c1e] rounded-xl mb-4"
         title="Toggle sidebar menu"
+        data-aos="zoom-out"
       >
         <h1 className="text-xl font-bold text-white">Ravi Tharun</h1>
         <button
@@ -97,7 +103,10 @@ const LeftSidebar = () => {
             <hr className="my-6 border-gray-700" />
 
             {/* Contact Info */}
-            <div className="space-y-6 text-base" title="Ways to get in touch with me">
+            <div
+              className="space-y-6 text-base"
+              title="Ways to get in touch with me"
+            >
               <h3 className="text-lg text-yellow-400 font-semibold mb-2">
                 Contact Info
               </h3>

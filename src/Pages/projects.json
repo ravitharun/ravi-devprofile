@@ -96,6 +96,66 @@
     "ProjectType": "Web"
   },
   {
+    "id": 4,
+    "ani": "zoom-in",
+    "title": "E commerce Website",
+    "description": "A E commerce Website built using MERN stack and the Dummy json API to help frontend developers find Products and Display in the webpage.",
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "Remotive API"
+    ],
+    "images": [
+      "https://okcredit-blog-images-prod.storage.googleapis.com/2021/04/ecommerce3-2.jpg",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+    ],
+    "tools": [
+      "Vite",
+      "Netlify",
+      "Render",
+      "GitHub",
+      "Axios",
+      "Postman"
+    ],
+    "features": [
+      "Product filtering by category and price",
+      "Real-time live product search",
+      "Responsive card-based product layout",
+      "Secure Razorpay payment integration",
+      "Email alerts for new products using Nodemailer",
+      "Role-based login system (Admin/User)",
+      "Add to cart functionality with smooth UX",
+      "Add to wishlist feature for saving favorites"
+    ],
+    "role": "MERN Developer",
+    "type": "Personal Project",
+    "tags": [
+      "E commerce",
+      "API",
+      "React",
+      "MERN",
+      "MOngoose",
+      "Express.js",
+      "Razorpay",
+      "Dummy.json"
+    ],
+    "outcomes": [],
+    "thumbnil": "https://okcredit-blog-images-prod.storage.googleapis.com/2021/04/ecommerce3-2.jpg",
+    "startDate": "2025-01-01",
+    "endDate": "2025-01-20",
+    "duration": "",
+    "status": "In Progress",
+    "liveLink": "https://github.com/ravitharun/ECommerce-web",
+    "githubLink": "https://github.com/ravitharun/ECommerce-web",
+    "videoDemo": "",
+    "screenshots": [
+      ""
+    ],
+    "isFeatured": true,
+    "ProjectType": "Web"
+  },
+  {
     "id": 5,
     "title": "College LMS System",
     "description": "A full-stack learning management system for college use, with role-based login, instructor dashboard, and course upload features.",
