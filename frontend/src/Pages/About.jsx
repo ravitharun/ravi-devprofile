@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import { FaCode, FaPaintBrush, FaMobileAlt, FaRobot } from "react-icons/fa";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollIndicator from "../Components/ScrollIndicator";
@@ -16,8 +15,8 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8" >
-      <LeftSidebar  />
+    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
+      <LeftSidebar />
       <ScrollIndicator />
       <div className="flex-1 p-4 md:p-8">
         <Navbar />
@@ -110,7 +109,7 @@ const About = () => {
 
         {/* What I'm Doing Section */}
         <div className="mt-8">
-          <h2 className="text-xl font-bold mb-6"> My Services</h2>
+          <h2 className="text-xl font-bold mb-6">My Services</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
               {
@@ -136,7 +135,7 @@ const About = () => {
                 title: "Artificial Intelligence and Machine Learning",
                 desc: "Building smarter and more efficient web applications.",
                 anim: "fade-up-right",
-                status: " Present I am Learning",
+                status: "Present I am Learning",
               },
             ].map((item, index) => (
               <div
@@ -149,7 +148,6 @@ const About = () => {
                     {item.status}
                   </span>
                 )}
-
                 <div className="text-yellow-400 text-2xl mb-2">{item.icon}</div>
                 <h3 className="text-white font-semibold mb-1">{item.title}</h3>
                 <p className="text-gray-400 text-sm">{item.desc}</p>
@@ -157,6 +155,7 @@ const About = () => {
             ))}
           </div>
 
+          {/* AI Learning Box */}
           <div
             className="relative bg-[#1c1c1e] p-6 mt-6 rounded-xl hover:border-yellow-400 border border-[#2a2a2a] transition duration-300"
             data-aos="zoom-in"
@@ -169,6 +168,33 @@ const About = () => {
               Machine Learning to build smarter and more efficient web
               applications.
             </h2>
+          </div>
+
+          {/* GitHub Stats Section */}
+          <div
+            className="mt-10 bg-[#1c1c1e] p-6 rounded-xl border border-gray-700 hover:border-blue-400 transition duration-300 shadow-md"
+            data-aos="fade-up"
+          >
+            <h2 className="text-2xl font-bold text-blue-400 mb-4 border-l-4 pl-3 border-blue-500">
+              📊 GitHub Stats & Contributions
+            </h2>
+            <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-6">
+              <img
+                src="https://github-readme-stats.vercel.app/api?username=ravitharun&show_icons=true&theme=github-dark&hide_border=true"
+                alt="GitHub Stats"
+                className="w-full max-w-md rounded-lg shadow-lg"
+              />
+              <img
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=ravitharun&layout=compact&theme=github-dark&hide_border=true"
+                alt="Top Languages"
+                className="w-full max-w-sm rounded-lg shadow-lg"
+              />
+              <img
+                src="https://github-readme-streak-stats.herokuapp.com/?user=ravitharun&theme=dark&hide_border=true"
+                alt="GitHub Streak"
+                className="w-full max-w-md rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
