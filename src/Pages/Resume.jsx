@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import ResumeButton from "../Components/ResumeButton";
 import ScrollIndicator from "../Components/ScrollIndicator";
+import { TimelineDemo } from "./TimelineDemo";
 function Resume() {
   const page = "Resume";
 
@@ -26,38 +27,38 @@ function Resume() {
     });
   }, []);
 
-  const items = [
-    {
-      title: "B.Tech (CSE)",
-      description:
-        "Currently in my final year of Bachelor of Technology (B.Tech) in Computer Science and Engineering at Dayananda Sagar University, Bangalore.",
-      timeframe: "2026",
-      icon: <FaGraduationCap />,
-      location: "Bangalore, Karnataka",
-      location_icon: <FaMapMarkerAlt />,
-      animi: "fade-left",
-    },
-    {
-      title: "Completed Class 12th",
-      description:
-        "Graduated from Sri Chaitanya Junior College under the State Board with a strong academic focus on Mathematics and Physics (MPC).",
-      timeframe: "2022",
-      location: "Tirupati, Andhra Pradesh",
-      location_icon: <FaMapMarkerAlt />,
-      icon: <MdSchool />,
-      animi: "fade-right",
-    },
-    {
-      title: "Completed Class 10th",
-      description:
-        "Graduated from Sri Chaitanya School, Kadapa, under the State Board with a strong academic foundation across core subjects.",
-      timeframe: "2020",
-      location: "Kadapa, Andhra Pradesh",
-      location_icon: <FaMapMarkerAlt />,
-      icon: <MdSchool />,
-      animi: "fade-up",
-    },
-  ];
+  // const items = [
+  //   {
+  //     title: "B.Tech (CSE)",
+  //     description:
+  //       "Currently in my final year of Bachelor of Technology (B.Tech) in Computer Science and Engineering at Dayananda Sagar University, Bangalore.",
+  //     timeframe: "2026",
+  //     icon: <FaGraduationCap />,
+  //     location: "Bangalore, Karnataka",
+  //     location_icon: <FaMapMarkerAlt />,
+  //     animi: "fade-left",
+  //   },
+  //   {
+  //     title: "Completed Class 12th",
+  //     description:
+  //       "Graduated from Sri Chaitanya Junior College under the State Board with a strong academic focus on Mathematics and Physics (MPC).",
+  //     timeframe: "2022",
+  //     location: "Tirupati, Andhra Pradesh",
+  //     location_icon: <FaMapMarkerAlt />,
+  //     icon: <MdSchool />,
+  //     animi: "fade-right",
+  //   },
+  //   {
+  //     title: "Completed Class 10th",
+  //     description:
+  //       "Graduated from Sri Chaitanya School, Kadapa, under the State Board with a strong academic foundation across core subjects.",
+  //     timeframe: "2020",
+  //     location: "Kadapa, Andhra Pradesh",
+  //     location_icon: <FaMapMarkerAlt />,
+  //     icon: <MdSchool />,
+  //     animi: "fade-up",
+  //   },
+  // ];
 
   const Ui = [
     "HTML",
@@ -116,7 +117,7 @@ function Resume() {
         <h2 className="text-3xl font-bold mb-6 text-center md:text-left">
           Education
         </h2>
-        <VerticalTimeline>
+        {/* <VerticalTimeline>
           {items.map((item, index) => (
             <VerticalTimelineElement
               key={index}
@@ -141,7 +142,8 @@ function Resume() {
               </div>
             </VerticalTimelineElement>
           ))}
-        </VerticalTimeline>
+        </VerticalTimeline> */}
+ <TimelineDemo/> {/* Assuming you have a TimelineDemo component */}
 
         {/* Skills Section */}
         <div className="mt-16">

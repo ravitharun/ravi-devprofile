@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
+
 import {
   FaEnvelope,
   FaPhone,
@@ -198,5 +199,4 @@ const LeftSidebar = () => {
     </>
   );
 };
-
 export default LeftSidebar;
