@@ -7,7 +7,7 @@ export default function Home() {
 
   setTimeout(() => {
     navigate("/about");
-  }, 35000);
+  }, 2500);
   return (
     <div className="w-full m-0 p-0 overflow-x-hidden">
       <SpotlightNewDemo />

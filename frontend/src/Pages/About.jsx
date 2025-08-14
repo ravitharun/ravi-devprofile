@@ -5,6 +5,7 @@ import ScrollIndicator from "../Components/ScrollIndicator";
 import { FaCode, FaPaintBrush, FaMobileAlt, FaRobot } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+// import { PointerHighlightDemo } from "./PointerHighlightDemo";
 
 const About = () => {
   useEffect(() => {

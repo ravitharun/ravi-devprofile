@@ -17,12 +17,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollIndicator from "../Components/ScrollIndicator";
 import { Link, useLocation } from "react-router-dom";
+import { PointerHighlight } from "./PointerhighlightMain";
 Modal.setAppElement("#root"); // Important for accessibility
 
 function Projects() {
   const location = useLocation();
   const Projects_Web = location.state || PROJECTS; // fallback
-  console.log(Projects_Web, "Projects_Web");
+
 
   useEffect(() => {
     AOS.init({
@@ -52,6 +53,9 @@ function Projects() {
         "Understanding client needs, business goals, and target audience to outline clear project objectives and deliverables.",
       icon: <FaClipboardList className="text-4xl text-blue-500" />,
       ani: "fade-up",
+      rectangleClassName: "bg-blue-500/40 border-0",
+      pointerClassName: "h-3 w-3 text-blue-400",
+      containerClassName: "inline-block mr-1 ",
     },
     {
       title: "2. Planning & Design",
@@ -59,6 +63,9 @@ function Projects() {
         "Creating wireframes, user flows, and design mockups while defining the tech stack, timeline, and resource allocation.",
       icon: <FaPencilRuler className="text-4xl text-purple-500" />,
       ani: "fade-left",
+      rectangleClassName: "bg-purple-500/40 border-0",
+      pointerClassName: "h-3 w-3 text-purple-400",
+      containerClassName: "inline-block mr-1 ",
     },
     {
       title: "3. Development & Testing",
@@ -66,6 +73,10 @@ function Projects() {
         "Building the application using clean, scalable code and performing continuous testing to ensure functionality and performance.",
       icon: <FaCode className="text-4xl text-green-500" />,
       ani: "fade-left",
+      rectangleClassName: "bg-green-500/40 border-0",
+      pointerClassName: "h-3 w-3 text-green-400",
+      containerClassName: "inline-block mr-1 ",
+
     },
     {
       title: "4. Deployment & Maintenance",
@@ -73,6 +84,9 @@ function Projects() {
         "Launching the project to production, monitoring its performance, and providing ongoing updates, fixes, and improvements.",
       icon: <FaRocket className="text-4xl text-red-500" />,
       ani: "fade-up",
+      rectangleClassName: "bg-red-500/40 border-0",
+      pointerClassName: "h-3 w-3 text-red-400",
+      containerClassName: "inline-block mr-1 ",
     },
   ];
 
@@ -96,8 +110,17 @@ function Projects() {
               >
                 <div>{item.icon}</div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-400">{item.description}</p>
+                  <PointerHighlight
+                  className='p-2'
+                    rectangleClassName={item.rectangleClassName}
+                    pointerClassName={item.pointerClassName}
+                    containerClassName={item.containerClassName}
+                  >
+                    <h3 className="text-xl font-semibold mb-1 text-white relative z-10">
+                      {item.title}
+                    </h3>
+                  </PointerHighlight>
+                  <li className="text-sm text-gray-400 mt-3">{item.description}</li>
                 </div>
               </div>
             ))}
