@@ -272,5 +272,64 @@
     "isFeatured": true,
     "ProjectType": "Ai & Ml",
     "ani": "zoom-in"
+  },
+  {
+    "id": 7,
+    "title": "Ola Clone Design",
+    "outcomes": [
+      "By using these Project I understand the How Prototype Want To create In Figma.",
+      "I learned how to use Figma for designing user interfaces.",
+      "I practiced creating responsive layouts and components.",
+      "I gained experience in designing mobile-first applications.",
+      "I learned how to use design systems and components effectively.",
+      "I practiced creating interactive prototypes in Figma."
+    ],
+    "description": "This project is a design prototype of an Ola clone, created using Figma. It showcases the user interface and user experience design for a ride-hailing application, including features like booking rides, viewing ride history, and managing user profiles.",
+    "techStack": [
+      "Machine Learning",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "tools": [
+      "GitHub",
+      "Figma"
+    ],
+    "images": [
+      "Imgaes frontend/src/assets/pic1.png",
+      "Imgaes frontend/src/assets/pic2.png",
+      "Imgaes frontend/src/assets/pic3.png",
+      "Imgaes frontend/src/assets/pic4.png"
+    ],
+    "features": [
+   
+    ],
+    "role": "Design",
+    "type": "Learning Project",
+    "tags": [
+      "FIgma",
+      "ola ",
+      "Ui/UX",
+      "Design",
+      "Figma Design",
+      "Figma Prototype",
+      "mobile design",
+      "mobile prototype"
+    ],
+    "thumbnil": "https://tse1.mm.bing.net/th/id/OIP.lQL_F6zxYOpG3gBY5OFuuwHaEK?pid=Api&P=0&h=180",
+    "startDate": "2025-07-11",
+    "endDate": "2025-07-11",
+    "duration": "2 Hours",
+    "status": "Completed",
+    "liveLink": "https://github.com/ravitharun/ml-heart-risk-predictor",
+    "githubLink": "https://github.com/ravitharun/ml-heart-risk-predictor",
+    "videoDemo": "https://youtu.be/lms-demo",
+    "screenshots": [
+      "/images/lms1.png",
+      "/images/lms2.png"
+    ],
+    "isFeatured": true,
+    "ProjectType": "Design",
+    "ani": "zoom-in"
   }
 ]

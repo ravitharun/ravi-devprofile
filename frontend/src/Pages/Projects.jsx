@@ -23,8 +23,6 @@ Modal.setAppElement("#root"); // Important for accessibility
 function Projects() {
   const location = useLocation();
   const Projects_Web = location.state || PROJECTS; // fallback
-
-
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -95,7 +93,6 @@ function Projects() {
       <LeftSidebar />
       <div className="flex-1 p-4 md:p-8">
         <Navbar page={page} />
-
         {/* Project Approach Section */}
         <section className="mb-10">
           <h2 className="text-3xl font-bold mb-6 border-b border-gray-700 pb-2 flex items-center gap-2">
