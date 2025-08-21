@@ -39,6 +39,7 @@ const LeftSidebar = () => {
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
+ 
 
       {/* Overlay for mobile */}
       {isOpen && (
