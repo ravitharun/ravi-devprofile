@@ -87,9 +87,17 @@ function Projects() {
       containerClassName: "inline-block mr-1 ",
     },
   ];
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
+  console.log(theme,'themethemethemethemetheme')
 
+  // Save to localStorage when theme changes
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
+    <div     className={`min-h-screen ${
+        theme === "Dark" ? "bg-black text-white" : "bg-gray-50 text-orange-500 font-mono "
+      } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}>
       <LeftSidebar />
       <div className="flex-1 p-4 md:p-8">
         <Navbar page={page} />

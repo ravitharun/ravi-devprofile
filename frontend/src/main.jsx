@@ -12,9 +12,10 @@ import Resume from "./Pages/Resume.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Certifications from "./Pages/Certifications.jsx";
 import Home from "./Pages/Home.jsx";
+import { ThemeProvider } from "./Pages/ThemeContext";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  <ThemeProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,5 +28,5 @@ createRoot(document.getElementById("root")).render(
         {/* Add more routes as needed */}
       </Routes>
     </BrowserRouter>
-  </StrictMode>
+  </ThemeProvider>
 );
