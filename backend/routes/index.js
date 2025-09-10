@@ -7,10 +7,11 @@ require('dotenv').config();
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.GOOGLE_APP_PASSWORD,
-  },
+    user:'tr565003@gmail.com',          // your Gmail
+    pass: 'ktdkgfcscqcpdmsh' // your Gmail App Password
+  }
 });
+
 
 // Contact form POST route
 router.post('/Send', async function (req, res) {

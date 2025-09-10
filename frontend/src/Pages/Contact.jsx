@@ -46,10 +46,10 @@ function Contact() {
 
     try {
       console.log(data)
-      const response = await axios.post(
-        "https://protifilo-backend.onrender.com/Send",
-        data
-      );
+     const response = await axios.post(
+      "https://protifilo-backend.onrender.com/Send", // your backend endpoint
+      data
+    );
       alert(response.data.message);
 
       // ✅ Clear form
