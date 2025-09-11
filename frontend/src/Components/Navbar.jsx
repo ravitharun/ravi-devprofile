@@ -27,7 +27,7 @@ const Navbar = ({ page }) => {
         {/* Logo */}
         <Link to="/">
           <h1 className="text-xl font-extrabold text-cyan-400 tracking-wide">
-            Protifilo {theme}
+            Protifilo 
           </h1>
         </Link>
 
