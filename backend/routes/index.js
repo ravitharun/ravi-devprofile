@@ -21,27 +21,46 @@ router.post('/Send', async function (req, res) {
     // Validate required fields
     
 console.log(data)
-    const message = {
-      from: data.Email,
-      to: "tharunravi672@gmail.com",
-      subject: data.Subject,
-      text: "This is a message from the Protifilo contact form.",
-      html: `
-        <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; border-radius: 10px;">
-          <h2 style="color: #2c3e50;">New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${data.Name}</p>
-          <p><strong>Email:</strong> ${data.Email}</p>
-          <p><strong>Subject:</strong> ${data.Subject}</p>
-          <p><strong>Message:</strong></p>
-          <p style="background-color: #ffffff; padding: 10px; border-left: 4px solid #3498db; color: #333;">
-            ${data.Message}
-          </p>
-          <hr />
-          <p style="font-size: 0.9em; color: #777;">This email was sent via the <strong>Protifilo</strong> contact form.</p>
-        </div>
-      `,
-      replyTo: data.Email,
-    };
+   const message = {
+  from: data.Email,
+  to: "tharunravi672@gmail.com",
+  subject: data.Subject,
+  text: `New message from ${data.Name} (${data.Email})\nSubject: ${data.Subject}\nMessage: ${data.Message}`,
+  html: `
+    <div style="
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      max-width: 600px; 
+      margin: auto; 
+      padding: 30px; 
+      background-color: #ffffff; 
+      border-radius: 15px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      color: #333333;
+    ">
+      <h1 style="text-align: center; color: #2c3e50;">📩 New Contact Form Submission</h1>
+      <p><strong>Name:</strong> ${data.Name}</p>
+      <p><strong>Email:</strong> ${data.Email}</p>
+      <p><strong>Subject:</strong> ${data.Subject}</p>
+      <p><strong>Message:</strong></p>
+      <div style="
+        background-color: #f4f6f8; 
+        padding: 15px; 
+        border-left: 5px solid #3498db; 
+        border-radius: 5px;
+        line-height: 1.5;
+        color: #555555;
+      ">
+        ${data.Message}
+      </div>
+      <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e0e0e0;">
+      <p style="font-size: 0.85em; color: #888888; text-align: center;">
+        This email was sent via <strong>Protifilo</strong> contact form.
+      </p>
+    </div>
+  `,
+  replyTo: data.Email,
+};
+
 
     // Send email
     await transporter.sendMail(message);
