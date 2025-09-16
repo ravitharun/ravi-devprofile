@@ -27,10 +27,9 @@ const Navbar = ({ page }) => {
         {/* Logo */}
         <Link to="/">
           <h1 className="text-xl font-extrabold text-cyan-400 tracking-wide">
-            Protifilo 
+          RaviTharun.dev
           </h1>
         </Link>
-
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-gray-300 text-sm font-medium items-center">
           {navLinks.map((link) => (
