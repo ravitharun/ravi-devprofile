@@ -1,5 +1,5 @@
 import React from 'react';
-import MYResume from "../assets/Ravi_Tharun_FullStack_Developer_Resume.pdf";
+import MYResume from "../assets/Full Stack Development Updated1.pdf";
 import { FaAndroid, FaDocker, FaFilePdf } from 'react-icons/fa';
 
 function ResumeButton() {

@@ -10,7 +10,7 @@ import {
   FaGithub,
   FaLocationArrow,
 } from "react-icons/fa";
-import pic from "../Pages/Profie.jpg";
+import pic from "../Pages/profile.jpg";
 import ResumeButton from "./ResumeButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
