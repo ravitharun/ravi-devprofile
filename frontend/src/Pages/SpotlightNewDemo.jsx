@@ -1,10 +1,9 @@
-"use client";
 import React from "react";
 import { Spotlight } from "./Spotlight";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaRocket } from "react-icons/fa";  // Rocket icon
-
+import { FaBriefcase } from "react-icons/fa";      // Portfolio / Work
 export function SpotlightNewDemo() {
   return (
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black antialiased">
@@ -33,7 +32,7 @@ export function SpotlightNewDemo() {
         >
           Empowering your digital journey with{" "}
           <span className="text-blue-400 font-semibold">creativity</span>,{" "}
-          <span className="text-purple-400 font-semibold">design</span>, and{" "}
+          <span className="text-purple-400 font-semibold">design</span>, And{" "}
           <span className="text-pink-400 font-semibold">code</span>.
         </motion.p>
         <motion.div
@@ -48,9 +47,10 @@ export function SpotlightNewDemo() {
 </button>
           </Link>
           <Link to="/portfolio">
-            <button className="px-6 py-3 rounded-xl font-semibold text-white bg-white/10 backdrop-blur-lg shadow-lg hover:bg-gray-800/80 transition duration-300 border border-white/20">
-              🎨 View Portfolio
-            </button>
+          <button className="px-6 py-3 flex items-center gap-2 rounded-xl font-semibold text-white bg-white/10 backdrop-blur-lg shadow-lg hover:bg-gray-800/80 transition duration-300 border border-white/20">
+  <FaBriefcase className="text-yellow-400" /> View Portfolio
+</button>
+
           </Link>
         </motion.div>
       </div>
