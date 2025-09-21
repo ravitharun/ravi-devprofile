@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import SkillBadge from "./SkillBadge";
 import { useState } from "react";
+import GitHubCalendar from "react-github-calendar";
 // import { PointerHighlightDemo } from "./PointerHighlightDemo";
 
 const About = () => {
@@ -200,6 +201,18 @@ const About = () => {
                 alt="GitHub Streak"
                 className="w-full max-w-md rounded-lg shadow-lg"
               />
+              <div className="p-6 bg-gray-900 rounded-2xl shadow-lg">
+      <h2 className="text-xl font-semibold text-white mb-4">
+        GitHub Contributions
+      </h2>
+      <GitHubCalendar
+        username="ravitharun"
+        blockSize={15}
+        blockMargin={5}
+        fontSize={14}
+        colorScheme="dark" // or "light"
+      />
+    </div>
             </div>
           </section>
         </div>
