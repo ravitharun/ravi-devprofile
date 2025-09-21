@@ -14,7 +14,7 @@ const SkiperMarqeeDemo = () => {
 
   setTimeout(() => {
     navigate("/about");
-  }, 120000);
+  }, 1000);
   return (
     <div className="overflow-hidden py-8 bg-white">
       {[...Array(4)].map((_, rowIndex) => (

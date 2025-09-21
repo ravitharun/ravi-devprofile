@@ -45,10 +45,11 @@ function Contact() {
     }
 
     try {
-      const response = await axios.post(
-        "https://protifilo-backend.onrender.com/Send",
-        data
-      );
+      console.log(data)
+     const response = await axios.post(
+      "https://protifilo-backend.onrender.com/Send", // your backend endpoint
+      data
+    );
       alert(response.data.message);
 
       // ✅ Clear form
@@ -61,9 +62,21 @@ function Contact() {
       alert("Something went wrong. Please try again.");
     }
   };
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
+  console.log(theme, "themethemethemethemetheme");
 
+  // Save to localStorage when theme changes
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
+    <div
+      className={`min-h-screen ${
+        theme === "Dark"
+          ? "bg-black text-white"
+          : "bg-white-100 text-orange-500 font-mono "
+      } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}
+    >
       {/* Sidebar */}
       <LeftSidebar />
 
@@ -75,7 +88,11 @@ function Contact() {
           <h2 className="text-4xl font-mono text-yellow-400 mb-4">
             Let’s Get in Touch
           </h2>
-          <p className="text-gray-300 text-lg font-Roboto">
+          <p
+            className={` ${
+              theme === "Dark" ? "text-gray-900 " : "text-gray-300"
+            }text-lg font-Roboto`}
+          >
             Have a project in mind, a collaboration opportunity, or just want to
             chat? Feel free to reach out. I’m always open to discussing new
             ideas or helping with your vision.
@@ -154,7 +171,7 @@ function Contact() {
             )}
           </div>
           <>
-                  <ScrollIndicator />
+            <ScrollIndicator />
             <div className="bg-gray-800 p-5 rounded-xl text-center mt-8 shadow-lg  ">
               <p className="text-gray-300">
                 Having trouble sending a message? You can also contact me
@@ -163,7 +180,8 @@ function Contact() {
               <a
                 href="mailto:tharunravi672@gmail.com"
                 className="block mt-2 text-yellow-400 font-semibold hover:underline hover:text-blue-500"
-title="Have a project in mind? Feel free to email me!"              >
+                title="Have a project in mind? Feel free to email me!"
+              >
                 tharunravi672@gmail.com
               </a>
             </div>

@@ -2,6 +2,8 @@ import React from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import ScrollIndicator from "../Components/ScrollIndicator";
+import { useEffect } from "react";
+import { useState } from "react";
 
 function Blog() {
   const page = "Blog";
@@ -29,9 +31,22 @@ function Blog() {
       slug: "learning-ai-step-by-step",
     },
   ];
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
+  console.log(theme, "themethemethemethemetheme");
+
+  // Save to localStorage when theme changes
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
   return (
     <>
-      <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
+      <div
+        className={`min-h-screen ${
+          theme === "Dark"
+            ? "bg-black text-white"
+            : "bg-white-100 text-orange-500 font-mono "
+        } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}
+      >
         {/* Sidebar */}
         <LeftSidebar />
 
@@ -39,9 +54,15 @@ function Blog() {
         <div className="flex-1 p-4 md:p-8">
           <Navbar page={page} />
 
-          <div className="min-h-screen bg-[#0f0f0f] text-white px-6 py-12">
+          <div
+            className={`min-h-screen ${
+              theme === "Dark"
+                ? "bg-black text-white"
+                : "bg-white-100 text-orange-500 font-mono "
+            } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}
+          >
             <div className="max-w-7xl mx-auto px-4">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              <h2 className="text-3xl font-bold text-green-900 mb-8 text-center">
                 Latest Blog Posts
               </h2>
 

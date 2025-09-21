@@ -10,7 +10,7 @@ import {
   FaGithub,
   FaLocationArrow,
 } from "react-icons/fa";
-import pic from "../Pages/Profie.jpg";
+import pic from "../Pages/profile.jpg";
 import ResumeButton from "./ResumeButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -71,21 +71,10 @@ const LeftSidebar = () => {
               >
                 <Typewriter
                   words={[
+                    "Bring your ideas to life.",
+                    "Let's bring your vision to life.",
                     "Have a project in mind?",
                     "Want to collaborate?",
-                    "Need a developer?",
-                    "Let's build something amazing!",
-                    "Turn your ideas into reality.",
-                    "Let’s work together!",
-                    "Got a startup idea?",
-                    "Building something cool?",
-                    "Your next big thing starts here.",
-                    "Drop me a message!",
-                    "React, Node, or MERN? I’m in!",
-                    "Frontend that feels great!",
-                    "Code it. Ship it. Repeat.",
-                    "Let's bring your vision to life.",
-                    "Clean code, solid UX, fast delivery.",
                   ]}
                   loop={true}
                   cursor

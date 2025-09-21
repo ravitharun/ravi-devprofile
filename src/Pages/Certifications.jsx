@@ -2,6 +2,8 @@ import React from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import { FaLinkedinIn, FaRegCalendarAlt } from "react-icons/fa";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function Certifications() {
   const page = "Certifications";
@@ -10,17 +12,36 @@ function Certifications() {
     {
       title: "Introduction to AI Concepts",
       issuer: "Microsoft Learn",
-      date: "July 2, 2024",
+      date: "July 2, 2025",
       iconDate: <FaRegCalendarAlt />,
       iconSocial: <FaLinkedinIn />,
       link: "https://www.linkedin.com/posts/ravitharun07_introduction-to-ai-concepts-activity-7346356415898275840-AMJ8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEQUcDIBrHbzwsArrPDZkzoT0XUf0EdER0M",
       post_img: "/Certifications/Certifications_AI_01_(microsoft).jpg",
       skills: ["AI", "Basics of AI"],
     },
+    {
+      title: "Hybrid Machine Learning Approach for Ride Hailing Demand Forecasting",
+      issuer: "JCT College of Engineering and Technology, Coimbatore, in association with IEEE IAS.",
+      date: "August 12, 2025-August 13, 2025",
+      iconDate: <FaRegCalendarAlt />,
+      iconSocial: <FaLinkedinIn />,
+      link: "https://www.linkedin.com/posts/ravitharun07_machinelearning-datascience-icisc2025-activity-7363071348694290432-tFXk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEQUcDIBrHbzwsArrPDZkzoT0XUf0EdER0M",
+      post_img: "https://media.licdn.com/dms/image/v2/D5622AQH3eXxlmnnhRg/feedshare-shrink_2048_1536/B56Zi7iXk8G0Ao-/0/1755493006806?e=1758758400&v=beta&t=m4N4g33KEV9D_U9XbxSQOQ08rmLpe0naM1FsNQQfGpk",
+      skills: ["AI/ml", "Machine Learning", "Data Science","sql","power bi"],
+    },
   ];
   console.log(certifications.length < 0);
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
+  console.log(theme,'themethemethemethemetheme')
+
+  // Save to localStorage when theme changes
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
   return (
-    <div className="min-h-screen bg-[#0f0f0f] text-white flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8">
+    <div     className={`min-h-screen ${
+        theme === "Dark" ? "bg-black text-white" : "bg-white-100 text-orange-500 font-mono "
+      } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}>
       {/* Sidebar */}
       <LeftSidebar />
 
