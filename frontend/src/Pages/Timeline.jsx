@@ -29,13 +29,14 @@ export const Timeline = ({ data }) => {
     >
       {/* Heading and description at the top */}
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 text-center">
-        <h2 className="text-lg md:text-4xl mb-2 text-black dark:text-white font-bold">
-          Journey so far
-        </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-xl mx-auto">
-          7 Years of Exploring Aceternity — My Journey in a Timeline{" "}
-        </p>
-      </div>
+  <h2 className="text-lg md:text-4xl mb-2 text-orange-500 font-bold">
+    Journey so far
+  </h2>
+  <p className="text-blue-500 dark:text-yellow-400 text-sm md:text-base max-w-xl mx-auto font-medium">
+    7 Years of Exploring Aceternity — My Journey in a Timeline
+  </p>
+</div>
+
 
       {/* Timeline entries */}
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

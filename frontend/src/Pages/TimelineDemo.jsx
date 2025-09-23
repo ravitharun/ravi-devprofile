@@ -9,69 +9,66 @@ export function TimelineDemo() {
       title: "B.Tech (CSE)",
       content: (
         <div>
-          <p className="mb-4 text-sm text-gray-800 dark:text-gray-200">
+          <p className="mb-3 text-black font-medium text-base">
             Currently in my final year of Bachelor of Technology (B.Tech) in
-            Computer Science and Engineering at Dayananda Sagar University,
-            Bangalore.
+            Computer Science and Engineering at <span className="text-orange-500 font-semibold">Dayananda Sagar University</span>, Bangalore.
           </p>
-          <p className="flex items-center gap-2 text-sm text-gray-800">
+          <p className="flex flex-wrap items-center gap-2 text-sm text-gray-700">
             <FaGraduationCap className="text-orange-500 text-lg" />
-            <span className="font-medium">Expected Graduation:</span>
-            <span className="text-gray-600">2026</span>
-            <span className="text-gray-400 text-xs">(2022 – 2026)</span>
+            <span className="font-semibold text-black">Expected Graduation:</span>
+            <span className="text-gray-700">2026</span>
+            <span className="text-gray-500 text-xs">(2022 – 2026)</span>
           </p>
-          <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-            <FaMapMarkerAlt /> Bangalore, Karnataka
+          <div className="flex items-center gap-2 text-gray-700 mt-1">
+            <FaMapMarkerAlt className="text-orange-500" /> <span className="text-black font-medium">Bangalore, Karnataka</span>
           </div>
         </div>
       ),
-      icon: <FaGraduationCap />,
+      icon: <FaGraduationCap className="text-orange-500" />,
       animi: "fade-left",
     },
     {
       title: "Completed Class 12th",
       content: (
         <div>
-          <p className="mb-4 text-sm text-gray-800 dark:text-gray-200">
-            Graduated from Sri Chaitanya Junior College under the State Board
-            with a strong academic focus on Mathematics and Physics (MPC).
+          <p className="mb-3 text-black font-medium text-base">
+            Graduated from <span className="text-orange-500 font-semibold">Sri Chaitanya Junior College</span> under the State Board with a strong academic focus on Mathematics and Physics (MPC).
           </p>
-          <p className="flex items-center gap-2 text-sm text-gray-800">
-            <FaGraduationCap className="text-green-500 text-lg" />
-            <span className="font-medium">Class 12th:</span>
-            <span className="text-gray-600">2020 – 2022</span>
+          <p className="flex items-center gap-2 text-sm text-gray-700">
+            <FaGraduationCap className="text-orange-500 text-lg" />
+            <span className="font-semibold text-black">Class 12th:</span>
+            <span className="text-gray-700">2020 – 2022</span>
           </p>
-
-          <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-            <FaMapMarkerAlt /> Tirupati, Andhra Pradesh
+          <div className="flex items-center gap-2 text-gray-700 mt-1">
+            <FaMapMarkerAlt className="text-orange-500" /> <span className="text-black font-medium">Tirupati, Andhra Pradesh</span>
           </div>
         </div>
       ),
-      icon: <MdSchool />,
+      icon: <MdSchool className="text-orange-500" />,
       animi: "fade-right",
     },
     {
       title: "Completed Class 10th",
       content: (
         <div>
-          <p className="mb-4 text-sm text-gray-800 dark:text-gray-200">
-            Graduated from Sri Chaitanya School, Kadapa, under the State Board
-            with a strong academic foundation across core subjects.
+          <p className="mb-3 text-black font-medium text-base">
+            Graduated from <span className="text-orange-500 font-semibold">Sri Chaitanya School, Kadapa</span> under the State Board with a strong academic foundation across core subjects.
           </p>
-          <p className="flex items-center gap-2 text-sm text-gray-800">
-            <FaGraduationCap className="text-green-500 text-lg" />
-            <span className="font-medium">Class 10th:</span>
-            <span className="text-gray-600">2019 – 2020</span>
+          <p className="flex items-center gap-2 text-sm text-gray-700">
+            <FaGraduationCap className="text-orange-500 text-lg" />
+            <span className="font-semibold text-black">Class 10th:</span>
+            <span className="text-gray-700">2019 – 2020</span>
           </p>
-          <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-            <FaMapMarkerAlt /> Kadapa, Andhra Pradesh
+          <div className="flex items-center gap-2 text-gray-700 mt-1">
+            <FaMapMarkerAlt className="text-orange-500" /> <span className="text-black font-medium">Kadapa, Andhra Pradesh</span>
           </div>
         </div>
       ),
-      icon: <MdSchool />,
+      icon: <MdSchool className="text-orange-500" />,
       animi: "fade-up",
     },
   ];
+
   return (
     <div className="relative w-full overflow-clip">
       <Timeline data={data} />
