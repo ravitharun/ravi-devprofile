@@ -43,7 +43,7 @@ const About = () => {
     },
   ];
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
-  console.log(theme,'themethemethemethemetheme')
+  console.log(theme, "themethemethemethemetheme");
 
   // Save to localStorage when theme changes
   useEffect(() => {
@@ -52,7 +52,9 @@ const About = () => {
   return (
     <div
       className={`min-h-screen ${
-        theme === "Dark" ? "bg-black text-white" : "bg-white-100 text-orange-500 font-mono "
+        theme === "Dark"
+          ? "bg-black text-white"
+          : "bg-white-100 text-orange-500 font-mono "
       } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}
     >
       {/* Left Sidebar */}
@@ -202,17 +204,18 @@ const About = () => {
                 className="w-full max-w-md rounded-lg shadow-lg"
               />
               <div className="p-6 bg-gray-900 rounded-2xl shadow-lg">
-      <h2 className="text-xl font-semibold text-white mb-4">
-        GitHub Contributions
-      </h2>
-      <GitHubCalendar
-        username="ravitharun"
-        blockSize={15}
-        blockMargin={5}
-        fontSize={14}
-        colorScheme="dark" // or "light"
-      />
-    </div>
+                <h2 className="text-xl font-semibold text-white mb-4">
+                  GitHub Contributions
+                </h2>
+                <GitHubCalendar
+                title="My GitHub Contribution Calendar"
+                  username="ravitharun"
+                  blockSize={15}
+                  blockMargin={5}
+                  fontSize={14}
+                  colorScheme="dark" // or "light"
+                />
+              </div>
             </div>
           </section>
         </div>
