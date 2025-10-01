@@ -90,8 +90,8 @@ function Contact() {
           </h2>
           <p
             className={` ${
-              theme === "Dark" ? "text-gray-900 " : "text-gray-300"
-            }text-lg font-Roboto`}
+              theme === "Dark" ? "text-white " : "text-gray-300"
+            }text-lg font-Roboto `}
           >
             Have a project in mind, a collaboration opportunity, or just want to
             chat? Feel free to reach out. I’m always open to discussing new

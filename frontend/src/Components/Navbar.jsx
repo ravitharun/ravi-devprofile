@@ -26,8 +26,8 @@ const Navbar = ({ page }) => {
       <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
-          <h1 className="text-xl font-extrabold text-cyan-400 tracking-wide">
-          RaviTharun.dev
+          <h1 className="text-xl font-extrabold  font-cursive  text-cyan-400 tracking-wide">
+            RaviTharun.dev
           </h1>
         </Link>
         {/* Desktop Menu */}

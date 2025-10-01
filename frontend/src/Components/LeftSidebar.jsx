@@ -120,7 +120,7 @@ const LeftSidebar = () => {
                 <p className="text-sm text-gray-400 mb-1">Phone</p>
                 <div className="flex items-center gap-3">
                   <FaPhone className="text-green-400 text-xl" />
-                  <span title="Call or WhatsApp me">+91 7396994383</span>
+              <a href="tel:7396994383" className="text-orange-500 hover:underline">7396994383</a>
                 </div>
               </div>
 

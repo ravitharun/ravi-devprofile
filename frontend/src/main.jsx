@@ -1,10 +1,11 @@
-import { StrictMode } from "react";
+
+import React, { Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom"; // ⬅️ Import Router
 import { Routes, Route } from "react-router-dom";
-import About from "./Pages/About.jsx";
+// import About from "./Pages/About.jsx";
 import Blog from "./Pages/Blog.jsx";
 // import Skills from "./Pages/Skills.jsx"
 import Projects from "./Pages/Projects.jsx";
@@ -13,13 +14,22 @@ import Contact from "./Pages/Contact.jsx";
 import Certifications from "./Pages/Certifications.jsx";
 import Home from "./Pages/Home.jsx";
 import { ThemeProvider } from "./Pages/ThemeContext";
+import Load from "./Components/Load";
+const About = React.lazy(() => import("./Pages/About"));
 
 createRoot(document.getElementById("root")).render(
   <ThemeProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route
+          path="/about"
+          element={
+            <Suspense fallback={<Load />}>
+              <About />
+            </Suspense>
+          }
+        />
         <Route path="/blog" element={<Blog />} />
         <Route path="/portfolio" element={<Projects />} />
         <Route path="/Certifications" element={<Certifications />} />
