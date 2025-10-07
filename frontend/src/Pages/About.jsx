@@ -8,8 +8,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import GitHubCalendar from "react-github-calendar";
 import Load from "../Components/Load";
-
-
 const About = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
 
@@ -64,6 +62,7 @@ const About = () => {
         <section className="space-y-4">
           <h1 className="text-3xl md:text-4xl font-bold border-l-4 border-yellow-400 pl-3">
             About Me
+            
           </h1>
           <p className="text-gray-400">
             Hello! I’m Ravi Tharun, a Full Stack Developer from Bangalore. I

@@ -38,7 +38,7 @@ function Resume() {
 
         {/* Resume Intro */}
         <section className="text-center md:text-left">
-          <p className="text-gray-300 text-lg md:text-xl mb-6 font-medium">
+          <p className={`text-lg md:text-xl mb-6 font-medium  {${theme} === "Dark" ? "bg-black text-white" : "bg-gray-50 text-black-500"`}>
             👉 Want to know more about my experience and skills? Feel free to
             download my resume. Explore my technical expertise and experience in detail.
           </p>

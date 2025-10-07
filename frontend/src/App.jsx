@@ -36,7 +36,8 @@ function App() {
       </Helmet>
 
       <Suspense fallback={<Load></Load>}>
-        <About />
+        <LoadersToShow />
+  
       </Suspense>
     </>
   );
