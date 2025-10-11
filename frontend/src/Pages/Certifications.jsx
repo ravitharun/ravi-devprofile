@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import { FaLinkedinIn, FaRegCalendarAlt } from "react-icons/fa";
-import { useState } from "react";
+// import { useState } from "react";
 import { useEffect } from "react";
+import { ThemeContext } from "./ThemeContext";
 
 function Certifications() {
   const page = "Certifications";
-
+   const { theme, setTheme } = useContext(ThemeContext);
   const certifications = [
     {
       title: "Introduction to AI Concepts",
@@ -30,11 +31,10 @@ function Certifications() {
       skills: ["AI/ml", "Machine Learning", "Data Science","sql","power bi"],
     },
   ];
-  console.log(certifications.length < 0);
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
-  console.log(theme,'themethemethemethemetheme')
 
-  // Save to localStorage when theme changes
+
+
+
   useEffect(() => {
     localStorage.setItem("theme", theme);
   }, [theme]);

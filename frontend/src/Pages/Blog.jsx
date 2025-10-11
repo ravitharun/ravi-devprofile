@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import ScrollIndicator from "../Components/ScrollIndicator";
 import { useEffect } from "react";
 import { useState } from "react";
+import { ThemeContext } from "./ThemeContext";
 
 function Blog() {
   const page = "Blog";
@@ -31,7 +32,7 @@ function Blog() {
       slug: "learning-ai-step-by-step",
     },
   ];
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
+   const { theme, setTheme } = useContext(ThemeContext);
   console.log(theme, "themethemethemethemetheme");
 
   // Save to localStorage when theme changes

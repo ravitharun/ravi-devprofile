@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import ScrollIndicator from "../Components/ScrollIndicator";
@@ -7,9 +7,10 @@ import { FaCode, FaPaintBrush, FaMobileAlt, FaRobot } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import GitHubCalendar from "react-github-calendar";
-import Load from "../Components/Load";
+// import Load from "../Components/Load";
+import { ThemeContext } from "./ThemeContext";
 const About = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
+   const { theme, setTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     AOS.init({ duration: 800, once: false });

@@ -5,13 +5,15 @@ import ResumeButton from "../Components/ResumeButton";
 import SkillBadge from "./SkillBadge";
 import ScrollIndicator from "../Components/ScrollIndicator";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ThemeContext } from "./ThemeContext";
 
 function Resume() {
   const page = "Resume";
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
+  // const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
+     const { theme, setTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     Aos.init({

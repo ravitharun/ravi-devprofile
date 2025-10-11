@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import axios from "axios";
 import ScrollIndicator from "../Components/ScrollIndicator";
+import { ThemeContext } from "./ThemeContext";
 function Contact() {
   const page = "Contact";
   const [name, setName] = useState("");
@@ -11,6 +12,7 @@ function Contact() {
   const [Message, setMessage] = useState("");
   const [loading, Setloading] = useState(false);
   const [URL, Seturl] = useState("");
+     const { theme, setTheme } = useContext(ThemeContext);
   useEffect(() => {
     const Load = () => {
       let url =
@@ -62,8 +64,8 @@ function Contact() {
       alert("Something went wrong. Please try again.");
     }
   };
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
-  console.log(theme, "themethemethemethemetheme");
+
+  // console.log(theme, "themethemethemethemetheme")     
 
   // Save to localStorage when theme changes
   useEffect(() => {
