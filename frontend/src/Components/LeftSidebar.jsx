@@ -15,6 +15,7 @@ import ResumeButton from "./ResumeButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Share } from "lucide-react";
+import ShareBtn from "../Pages/Share"
 const LeftSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
@@ -90,7 +91,7 @@ const LeftSidebar = () => {
             <div title="Download my resume (PDF)">
               <ResumeButton />
             </div>
-              <Share></Share>
+              
 
             <hr className="my-6 border-gray-700" />
 
@@ -163,6 +164,7 @@ const LeftSidebar = () => {
                 >
                   <FaGithub />
                 </a>
+                <ShareBtn></ShareBtn>
               </div>
             </div>
           </div>

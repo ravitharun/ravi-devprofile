@@ -1,23 +1,31 @@
 import React from "react";
+import { FiShare2 } from "react-icons/fi"; // share icon
 
-function Share() {
+function ShareBtn() {
   const shareData = {
-    title: "MDN",
-    text: "Learn web development on MDN!",
+    title: "Protifilo",
+    text: "Check out my portfolio!",
     url: "https://raviprotifilo.netlify.app/",
   };
-  // export default shareData
+
   const Handelshare = async () => {
-    await navigator.share(shareData);
+    try {
+      await navigator.share(shareData);
+    } catch (err) {
+      console.error("Share failed:", err);
+    }
   };
   return (
     <>
-      <button className="bg-green-500 text-white cursor-pointer" title="Share" onClick={Handelshare}
->
-        Share
+      <button
+        className="flex items-center gap-2 bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600"
+        onClick={Handelshare}
+      >
+        <FiShare2 size={18} />
+        Share Me
       </button>
     </>
   );
 }
 
-export default Share;
+export default ShareBtn;
