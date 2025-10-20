@@ -14,6 +14,7 @@ import pic from "../Pages/profile.jpg";
 import ResumeButton from "./ResumeButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Share } from "lucide-react";
 const LeftSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
@@ -89,6 +90,7 @@ const LeftSidebar = () => {
             <div title="Download my resume (PDF)">
               <ResumeButton />
             </div>
+              <Share></Share>
 
             <hr className="my-6 border-gray-700" />
 

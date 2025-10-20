@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import {
@@ -18,11 +18,14 @@ import "aos/dist/aos.css";
 import ScrollIndicator from "../Components/ScrollIndicator";
 import { Link, useLocation } from "react-router-dom";
 import { PointerHighlight } from "./PointerhighlightMain";
+import { ThemeContext } from "./ThemeContext";
 Modal.setAppElement("#root"); // Important for accessibility
 
 function Projects() {
   const location = useLocation();
   const Projects_Web = location.state || PROJECTS; // fallback
+  const { theme } = useContext(ThemeContext);
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -74,7 +77,6 @@ function Projects() {
       rectangleClassName: "bg-green-500/40 border-0",
       pointerClassName: "h-3 w-3 text-green-400",
       containerClassName: "inline-block mr-1 ",
-
     },
     {
       title: "4. Deployment & Maintenance",
@@ -87,17 +89,21 @@ function Projects() {
       containerClassName: "inline-block mr-1 ",
     },
   ];
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
-  console.log(theme,'themethemethemethemetheme')
+  // const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
+  // console.log(theme,'themethemethemethemetheme')
 
   // Save to localStorage when theme changes
   useEffect(() => {
     localStorage.setItem("theme", theme);
   }, [theme]);
   return (
-    <div     className={`min-h-screen ${
-        theme === "Dark" ? "bg-black text-white" : "bg-gray-50 text-orange-500 font-mono "
-      } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}>
+    <div
+      className={`min-h-screen ${
+        theme === "Dark"
+          ? "bg-black text-white"
+          : "bg-gray-50 text-orange-500 font-mono "
+      } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}
+    >
       <LeftSidebar />
       <div className="flex-1 p-4 md:p-8">
         <Navbar page={page} />
@@ -116,7 +122,7 @@ function Projects() {
                 <div>{item.icon}</div>
                 <div>
                   <PointerHighlight
-                  className='p-2'
+                    className="p-2"
                     rectangleClassName={item.rectangleClassName}
                     pointerClassName={item.pointerClassName}
                     containerClassName={item.containerClassName}
@@ -125,7 +131,9 @@ function Projects() {
                       {item.title}
                     </h3>
                   </PointerHighlight>
-                  <li className="text-sm text-gray-400 mt-3">{item.description}</li>
+                  <li className="text-sm text-gray-400 mt-3">
+                    {item.description}
+                  </li>
                 </div>
               </div>
             ))}
