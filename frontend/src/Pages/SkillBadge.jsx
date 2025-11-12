@@ -283,7 +283,7 @@ export default function SkillBadge() {
                 />
               ),
               color: "bg-indigo-500",
-              shadow: "rgba(236,72,153,0.6)",
+              shadow: "rgba(236,72,153,0.4)",
             },
           ].map((skill, i) => (
             <motion.div
