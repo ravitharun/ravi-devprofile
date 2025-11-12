@@ -217,7 +217,8 @@ export default function SkillBadge() {
       label: "Data Visualization",
       content: (
         <div className="flex flex-wrap gap-3">
-          {[
+          {
+          [
             {
               name: "NumPy",
               icon: <SiNumpy />,
@@ -258,6 +259,30 @@ export default function SkillBadge() {
               name: "Plotly",
               icon: <SiPlotly />,
               color: "bg-pink-500",
+              shadow: "rgba(236,72,153,0.6)",
+            },
+            {
+              name: "Power Bi",
+              icon: (
+                <img
+                  src="https://th.bing.com/th/id/OIP.S0GTuACXiCPQnB-LYT2vHgHaEc?o=7&cb=ucfimgc2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                  alt="power Bi"
+                  className="w-6 h-6"
+                />
+              ),
+              color: "bg-purple-500",
+              shadow: "rgba(236,72,153,0.6)",
+            },
+            {
+              name: "Ms Excel",     
+             icon: (
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/038/600/540/non_2x/microsoft-excel-logo-microsoft-icon-art-free-vector.jpg"
+                  alt="Ms Excel"
+                  className="w-6 h-6"
+                />
+              ),
+              color: "bg-indigo-500",
               shadow: "rgba(236,72,153,0.6)",
             },
           ].map((skill, i) => (
