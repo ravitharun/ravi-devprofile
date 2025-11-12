@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SpotlightNewDemo } from "./SpotlightNewDemo";
 import Load from "../Components/Load";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -22,8 +23,11 @@ export default function Home() {
   }
 
   return (
-    <div className="w-full m-0 p-0 overflow-x-hidden">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-[#0f0f0f] text-center px-4 overflow-x-hidden">
       <SpotlightNewDemo />
+
+
     </div>
+
   );
 }

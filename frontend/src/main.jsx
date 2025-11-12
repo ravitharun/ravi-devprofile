@@ -26,7 +26,7 @@ export function Main() {
             path="/about"
             element={
               <Suspense fallback={<Load />}>
-                <About />
+                <Home />
               </Suspense>
             }
           />
