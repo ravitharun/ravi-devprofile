@@ -7,27 +7,38 @@ import Projects from "./Pages/Projects.jsx";
 import Resume from "./Pages/Resume.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Certifications from "./Pages/Certifications.jsx";
-import Home from "./Pages/Home.jsx";
+
 import { ThemeProvider } from "./Pages/ThemeContext";
 import Load from "./Components/Load";
+import About from "./Pages/About";
 
-const About = React.lazy(() => import("./Pages/About.jsx"));
+const Home = React.lazy(() => import("./Pages/Home"));
 
 export function Main() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
-  console.log("theme",theme)
+  console.log("theme", theme)
 
   return (
     <ThemeProvider value={{ theme, setTheme }}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route
+            path="/"
+            element={
+              <Suspense fallback={<Load />}>
+                <Home />
+              </Suspense>
+            }
+          />
+
+          {/* // about page  route */}
           <Route
             path="/about"
             element={
-              <Suspense fallback={<Load />}>
-                <About />
-              </Suspense>
+
+              <About />
+
             }
           />
           <Route path="/blog" element={<Blog />} />
