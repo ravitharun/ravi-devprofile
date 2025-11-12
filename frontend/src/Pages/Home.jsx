@@ -13,7 +13,7 @@ export default function Home() {
     setLoading(true); // show loader
     const timer = setTimeout(() => {
       setLoading(false); // hide loader
-      navigate("/about");
+      // navigate("/");
     }, 2500);
     return () => clearTimeout(timer);
   }, [navigate]);

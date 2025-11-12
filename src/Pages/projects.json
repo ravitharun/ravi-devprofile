@@ -1,0 +1,335 @@
+[
+  {
+    "id": 1,
+    "title": "Protifilo Website",
+    "description": "My personal portfolio website showcasing my development skills, projects, and contact information with a responsive modern UI.",
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+    "outcomes": [],
+    "images": [
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+    ],
+    "tools": [
+      "Figma",
+      "Netlify",
+      "Git"
+    ],
+    "features": [
+      "Responsive layout",
+      "Animated transitions",
+      "Dark mode toggle"
+    ],
+    "role": "Solo Developer",
+    "type": "Personal Project",
+    "tags": [
+      "Portfolio",
+      "React",
+      "UI/UX"
+    ],
+    "startDate": "2024-08-01",
+    "endDate": "2024-09-15",
+    "duration": "1.5 months",
+    "status": "Completed",
+    "liveLink": "https://raviprotifilo.netlify.app/",
+    "githubLink": "https://github.com/ravitharun/ravi-devprofile",
+    "videoDemo": "https://www.youtube.com/watch?v=gxHXPmePnvo",
+    "screenshots": [
+      "/images/protifilo1.png",
+      "/images/protifilo2.png"
+    ],
+    "outcomes": [],
+    "ani": "zoom-in",
+    "isFeatured": true,
+    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+    "ProjectType": "Web"
+  },
+  {
+    "id": 3,
+    "ani": "zoom-in",
+    "title": "Job Finder Platform",
+    "description": "A job search platform built using React and the Remotive API to help frontend developers find remote jobs with filters.",
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "Remotive API"
+    ],
+    "images": [
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+    ],
+    "tools": [
+      "Vite",
+      "Netlify",
+      "Axios"
+    ],
+    "features": [
+      "Job filters",
+      "Live search",
+      "Card-based layout"
+    ],
+    "role": "Frontend Developer",
+    "type": "Personal Project",
+    "tags": [
+      "Job Portal",
+      "API",
+      "React"
+    ],
+    "outcomes": [],
+    "thumbnil": "https://tse2.mm.bing.net/th/id/OIP.ROZmanJPcqNJdygki44N3wAAAA?pid=Api&P=0&h=180",
+    "startDate": "2025-01-01",
+    "endDate": "2025-01-20",
+    "duration": "20 days",
+    "status": "In Progress",
+    "liveLink": "https://github.com/ravitharun/job-portal",
+    "githubLink": "https://github.com/ravitharun/job-portal",
+    "videoDemo": "",
+    "screenshots": [
+      "/images/jobfinder.png"
+    ],
+    "isFeatured": true,
+    "ProjectType": "Web"
+  },
+  {
+    "id": 4,
+    "ani": "zoom-in",
+    "title": "E commerce Website",
+    "description": "A E commerce Website built using MERN stack and the Dummy json API to help frontend developers find Products and Display in the webpage.",
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "Remotive API"
+    ],
+    "images": [
+      "https://okcredit-blog-images-prod.storage.googleapis.com/2021/04/ecommerce3-2.jpg",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+    ],
+    "tools": [
+      "Vite",
+      "Netlify",
+      "Render",
+      "GitHub",
+      "Axios",
+      "Postman"
+    ],
+    "features": [
+      "Product filtering by category and price",
+      "Real-time live product search",
+      "Responsive card-based product layout",
+      "Secure Razorpay payment integration",
+      "Email alerts for new products using Nodemailer",
+      "Role-based login system (Admin/User)",
+      "Add to cart functionality with smooth UX",
+      "Add to wishlist feature for saving favorites"
+    ],
+    "role": "MERN Developer",
+    "type": "Personal Project",
+    "tags": [
+      "E commerce",
+      "API",
+      "React",
+      "MERN",
+      "MOngoose",
+      "Express.js",
+      "Razorpay",
+      "Dummy.json"
+    ],
+    "outcomes": [],
+    "thumbnil": "https://okcredit-blog-images-prod.storage.googleapis.com/2021/04/ecommerce3-2.jpg",
+    "startDate": "2025-01-01",
+    "endDate": "2025-01-20",
+    "duration": "",
+    "status": "In Progress",
+    "liveLink": "https://github.com/ravitharun/ECommerce-web",
+    "githubLink": "https://github.com/ravitharun/ECommerce-web",
+    "videoDemo": "",
+    "screenshots": [
+      ""
+    ],
+    "isFeatured": true,
+    "ProjectType": "Web"
+  },
+  {
+    "id": 5,
+    "title": "College LMS System",
+    "description": "A full-stack learning management system for college use, with role-based login, instructor dashboard, and course upload features.",
+    "techStack": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "outcomes": [],
+    "tools": [
+      "Postman",
+      "Vercel",
+      "Mongoose",
+      "GitHub"
+    ],
+    "images": [
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
+    ],
+    "features": [
+      "Role-based login",
+      "Course upload",
+      "Profile editing",
+      "Attendance dashboard"
+    ],
+    "role": "Full Stack Developer",
+    "type": "College Project",
+    "tags": [
+      "LMS",
+      "MERN",
+      "Education"
+    ],
+    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
+    "startDate": "2025-03-01",
+    "endDate": "2025-04-15",
+    "duration": "1.5 months",
+    "status": "In Progress",
+    "liveLink": "https://github.com/ravitharun/lms-portal-mern",
+    "githubLink": "https://github.com/ravitharun/lms-portal-mern",
+    "videoDemo": "https://youtu.be/lms-demo",
+    "testCredentials": {
+      "student": {
+        "email": "student@test.com",
+        "password": "123456"
+      },
+      "instructor": {
+        "email": "teacher@test.com",
+        "password": "abcdef"
+      }
+    },
+    "screenshots": [
+      "/images/lms1.png",
+      "/images/lms2.png"
+    ],
+    "isFeatured": true,
+    "ProjectType": "Web",
+    "ani": "zoom-in"
+  },
+  {
+    "id": 6,
+    "title": "Heart Disease  Prediction",
+    "outcomes": [
+      "Built a Logistic Regression model to predict heart disease using medical data.",
+      "Created a simple interface for users to enter medical info and see predictions.",
+      "Learned how to read data from a CSV file and train a machine learning model.",
+      "Understood how to clean and use datasets in a project.",
+      "Gained experience in deploying a machine learning model with a Node.js backend.",
+      "Practiced using Logistic Regression and training it with real data.",
+      "Got a basic idea of how machine learning is used in real-world projects."
+    ],
+    "description": "This project utilizes a Logistic Regression model to predict the likelihood of Heart Disease based on various key medical indicators. The input features include age, sex, chest pain type (cp), resting blood pressure (trestbps), serum cholesterol levels, fasting blood sugar, maximum heart rate achieved (thalach), exercise-induced angina, ST depression (oldpeak), and more. The model outputs a simple result: Yes (if the patient is likely to have heart disease) or No (if not), helping demonstrate predictive modeling in healthcare scenarios.",
+    "techStack": [
+      "Machine Learning",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "tools": [
+      "GitHub"
+    ],
+    "images": [
+      "Imgaes frontend/src/assets/pic1.png",
+      "Imgaes frontend/src/assets/pic2.png",
+      "Imgaes frontend/src/assets/pic3.png",
+      "Imgaes frontend/src/assets/pic4.png"
+    ],
+    "features": [
+      "Easily input values using interactive sliders for key medical attributes.",
+      "The model evaluates the entered features and returns a simple prediction: Yes (1) if the person is likely to have heart disease, or No (0) if not."
+    ],
+    "role": "Ai & Ml",
+    "type": "Learning Project",
+    "tags": [
+      "Ai",
+      "medical ",
+      "ML",
+      "Dataset",
+      "Heart Disease"
+    ],
+    "thumbnil": "https://tse1.mm.bing.net/th/id/OIP.m3ap_MLgbjV3N-aCrE4svAHaCQ?pid=Api&P=0&h=180",
+    "startDate": "2025-07-11",
+    "endDate": "2025-07-11",
+    "duration": "2 Hours",
+    "status": "Completed",
+    "liveLink": "https://github.com/ravitharun/ml-heart-risk-predictor",
+    "githubLink": "https://github.com/ravitharun/ml-heart-risk-predictor",
+    "videoDemo": "https://youtu.be/lms-demo",
+    "screenshots": [
+      "/images/lms1.png",
+      "/images/lms2.png"
+    ],
+    "isFeatured": true,
+    "ProjectType": "Ai & Ml",
+    "ani": "zoom-in"
+  },
+  {
+    "id": 7,
+    "title": "Ola Clone Design",
+    "outcomes": [
+      "By using these Project I understand the How Prototype Want To create In Figma.",
+      "I learned how to use Figma for designing user interfaces.",
+      "I practiced creating responsive layouts and components.",
+      "I gained experience in designing mobile-first applications.",
+      "I learned how to use design systems and components effectively.",
+      "I practiced creating interactive prototypes in Figma."
+    ],
+    "description": "This project is a design prototype of an Ola clone, created using Figma. It showcases the user interface and user experience design for a ride-hailing application, including features like booking rides, viewing ride history, and managing user profiles.",
+    "techStack": [
+      "Machine Learning",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "tools": [
+      "GitHub",
+      "Figma"
+    ],
+    "images": [
+      "Imgaes frontend/src/assets/pic1.png",
+      "Imgaes frontend/src/assets/pic2.png",
+      "Imgaes frontend/src/assets/pic3.png",
+      "Imgaes frontend/src/assets/pic4.png"
+    ],
+    "features": [
+   
+    ],
+    "role": "Design",
+    "type": "Learning Project",
+    "tags": [
+      "FIgma",
+      "ola ",
+      "Ui/UX",
+      "Design",
+      "Figma Design",
+      "Figma Prototype",
+      "mobile design",
+      "mobile prototype"
+    ],
+    "thumbnil": "https://tse1.mm.bing.net/th/id/OIP.lQL_F6zxYOpG3gBY5OFuuwHaEK?pid=Api&P=0&h=180",
+    "startDate": "2025-07-11",
+    "endDate": "2025-07-11",
+    "duration": "2 Hours",
+    "status": "Completed",
+    "liveLink": "https://github.com/ravitharun/ml-heart-risk-predictor",
+    "githubLink": "https://github.com/ravitharun/ml-heart-risk-predictor",
+    "videoDemo": "https://youtu.be/lms-demo",
+    "screenshots": [
+      "/images/lms1.png",
+      "/images/lms2.png"
+    ],
+    "isFeatured": true,
+    "ProjectType": "Design",
+    "ani": "zoom-in"
+  }
+]

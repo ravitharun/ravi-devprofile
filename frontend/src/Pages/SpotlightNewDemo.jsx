@@ -54,22 +54,22 @@ export function SpotlightNewDemo() {
             className="inline-block mt-3 text-base md:text-lg bg-[#1a1a1a] px-5 py-2 rounded-full text-red-300 shadow-lg"
             title="Motivational taglines about collaboration"
           >
-<Typewriter
-  words={[
-    "Crafting seamless web experiences with the MERN Stack.",
-    "Transforming complex data into powerful insights.",
-    "Building intelligent and scalable digital solutions.",
-    "Turning ideas into impactful products with design and logic.",
-    "Code, analyze, and create with purpose.",
-    "Empowering businesses through data-driven development.",
-  ]}
-  loop
-  cursor
-  cursorStyle="|"
-  typeSpeed={70}
-  deleteSpeed={50}
-  delaySpeed={1500}
-/>
+            <Typewriter
+              words={[
+                "Crafting seamless web experiences with the MERN Stack.",
+                "Transforming complex data into powerful insightS.",
+                "Building intelligent and scalable digital solutions.",
+                "Turning ideas into impactful products with design and logic.",
+                "Code, analyze, and create with purpose.",
+                "Empowering businesses through data-driven development.",
+              ]}
+              loop
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
 
           </span>
         </motion.div>
