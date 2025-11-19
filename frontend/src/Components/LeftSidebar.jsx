@@ -88,9 +88,9 @@ const LeftSidebar = () => {
               </span>
             </div>
 
-            <div title="Download my resume (PDF)">
-              <ResumeButton />
-            </div>
+            <div >
+      <ResumeButton />
+    </div>
               
 
             <hr className="my-6 border-gray-700" />
