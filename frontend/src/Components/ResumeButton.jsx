@@ -29,7 +29,7 @@ function ResumeButton() {
       {IsopenResumes &&
         ReactDOM.createPortal(
           <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[9999]">
-            <div className="bg-white text-white w-96 p-6 rounded-xl shadow-2xl relative">
+            <div className="bg-gray-900 text-white w-96 p-6 rounded-xl shadow-2xl relative">
 
               <button
                 onClick={DownloadResume}
@@ -39,16 +39,16 @@ function ResumeButton() {
               </button>
 
               <h2 className="text-2xl font-semibold mb-5 text-center">
-                Your Resumes
+                My Resumes
               </h2>
 
-              <div className="space-y-4">
+              <div className="space-y-4 ">
                 {resume.map((data, idx) => (
                   <div
                     key={idx}
-                    className="border  p-4 rounded flex justify-between "
+                    className=" p-4 rounded flex justify-between bg-gray-900 border-white-500"
                   >
-                    <p className="bg--black-500 ">{data.filename}</p>
+                    <p className=" ">{data.filename}</p>
                     <a href={data.fileurl} download>
                       <FaFilePdf className="text-red-400 text-3xl" />
                     </a>
