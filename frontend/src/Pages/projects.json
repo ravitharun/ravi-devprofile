@@ -331,5 +331,58 @@
     "isFeatured": true,
     "ProjectType": "Design",
     "ani": "zoom-in"
+  },
+
+ {
+    "id": 8,
+    "title": "Sales Dashboard Based on The Product And Category(Excel)",
+    "outcomes": [
+      "By using these Project I understand the How To make the pivottable and how to make charts.",
+      "By using these Projects I understand Data Prepration and Data Cleaning and Data Model",
+      "These Project Give me Analaysis of the Sales of 4 years of Data  is been used ."  
+    ],
+    "description": "This project is Based on the Sales Dashboard Based on The Product And Category using the Excel tool i had made the dashboard  ",
+    "techStack": [
+      "Excel"
+    ],
+    "tools": [
+      "Excel"
+    ],
+    "images": [
+      "Imgaes frontend/src/assets/pic1.png",
+      "Imgaes frontend/src/assets/pic2.png",
+      "Imgaes frontend/src/assets/pic3.png",
+      "Imgaes frontend/src/assets/pic4.png"
+    ],
+    "features": [
+   
+    ],
+    "role": "Data Analytics",
+    "type": "Learning Project",
+    "tags": [
+      "PowerBi",
+      "Sales ",
+      "Excel",
+      "Data Analytics",
+      "Data"
+    ],
+    "thumbnil": "https://tse1.mm.bing.net/th/id/OIP.lQL_F6zxYOpG3gBY5OFuuwHaEK?pid=Api&P=0&h=180",
+    "startDate": "2025-07-19",
+    "endDate": "2025-07-19",
+    "duration": "2 Hours",
+    "status": "Completed",
+    "liveLink": "https://github.com/ravitharun/ml-heart-risk-predictor",
+    "githubLink": "https://github.com/ravitharun/ml-heart-risk-predictor",
+    "videoDemo": "https://youtu.be/lms-demo",
+    "screenshots": [
+      "/images/lms1.png",
+      "/images/lms2.png"
+    ],
+    "isFeatured": true,
+    "IsNewProject":true,
+    "ProjectType": "Data Analytics",
+    "ani": "zoom-in"
   }
+
+
 ]
