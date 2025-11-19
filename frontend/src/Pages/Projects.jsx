@@ -149,44 +149,51 @@ function Projects() {
         <ProjectsNavbar />
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {Projects_Web.length > 0 ? (
-            Projects_Web.map((project, index) => (
-              <div
-                data-aos={project.ani}
-                key={index}
-                onClick={() => openModal(project)}
-                className="cursor-pointer bg-[#1c1c1c] rounded-2xl shadow-md hover:shadow-blue-500/30 transition-shadow duration-300"
-              >
-                <img
-                  src={project.thumbnil}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-t-2xl"
-                />
-                <div className="p-4">
-                  <h2 className="text-xl font-semibold mb-1">
-                    {project.title}
-                  </h2>
-                  <p className="text-sm text-gray-400 mb-2">
-                    {project.description}
-                  </p>
-                  <p className="text-sm">
-                    <span className="font-semibold text-blue-500">Type:</span>{" "}
-                    <span className="text-amber-400">
-                      {project.ProjectType}
-                    </span>
-                  </p>
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="col-span-full flex justify-center mt-3">
-              <p className="px-6 py-3 bg-gray-900 text-blue-400 rounded-xl border border-blue-700 shadow-lg font-mono text-base text-center">
-                🚧 Adding soon! Available within{" "}
-                <span className="text-amber-400 font-semibold">24 Hr's</span>
-              </p>
-            </div>
-          )}
+  {Projects_Web.length > 0 ? (
+    Projects_Web.map((project, index) => (
+      <div
+        data-aos={project.ani}
+        key={index}
+        onClick={() => openModal(project)}
+        className="relative cursor-pointer bg-[#1c1c1c] rounded-2xl shadow-md hover:shadow-blue-500/30 transition-shadow duration-300"
+      >
+        {/* New Project Badge */}
+        {project.IsNewProject && (
+          <span className="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-md shadow-md">
+            NEW
+          </span>
+        )}
+
+        <img
+          src={project.thumbnil}
+          alt={project.title}
+          className="w-full h-48 object-cover rounded-t-2xl"
+        />
+
+        <div className="p-4">
+          <h2 className="text-xl font-semibold mb-1">{project.title}</h2>
+
+          <p className="text-sm text-gray-400 mb-2">
+            {project.description}
+          </p>
+
+          <p className="text-sm">
+            <span className="font-semibold text-blue-500">Type:</span>{" "}
+            <span className="text-amber-400">{project.ProjectType}</span>
+          </p>
         </div>
+      </div>
+    ))
+  ) : (
+    <div className="col-span-full flex justify-center mt-3">
+      <p className="px-6 py-3 bg-gray-900 text-blue-400 rounded-xl border border-blue-700 shadow-lg font-mono text-base text-center">
+        🚧 Adding soon! Available within{" "}
+        <span className="text-amber-400 font-semibold">24 Hr's</span>
+      </p>
+    </div>
+  )}
+</div>
+
 
         {/* Modal with Card UI */}
         <Modal
