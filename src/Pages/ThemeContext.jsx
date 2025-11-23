@@ -4,7 +4,8 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
-
+// console.log(children.props)
+console.log({children})
   useEffect(() => {
     const root = document.documentElement;
 

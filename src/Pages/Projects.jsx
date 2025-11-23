@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import {
@@ -18,11 +18,14 @@ import "aos/dist/aos.css";
 import ScrollIndicator from "../Components/ScrollIndicator";
 import { Link, useLocation } from "react-router-dom";
 import { PointerHighlight } from "./PointerhighlightMain";
+import { ThemeContext } from "./ThemeContext";
 Modal.setAppElement("#root"); // Important for accessibility
 
 function Projects() {
   const location = useLocation();
   const Projects_Web = location.state || PROJECTS; // fallback
+  const { theme } = useContext(ThemeContext);
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -35,6 +38,7 @@ function Projects() {
   const page = "Portfolio";
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  console.log(selectedProject,'selectedProject')
   const openModal = (project) => {
     setSelectedProject(project);
     setModalIsOpen(true);
@@ -74,7 +78,6 @@ function Projects() {
       rectangleClassName: "bg-green-500/40 border-0",
       pointerClassName: "h-3 w-3 text-green-400",
       containerClassName: "inline-block mr-1 ",
-
     },
     {
       title: "4. Deployment & Maintenance",
@@ -87,17 +90,19 @@ function Projects() {
       containerClassName: "inline-block mr-1 ",
     },
   ];
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
-  console.log(theme,'themethemethemethemetheme')
-
-  // Save to localStorage when theme changes
   useEffect(() => {
     localStorage.setItem("theme", theme);
   }, [theme]);
+
+  console.log(PROJECTS,'PROJECTS')
   return (
-    <div     className={`min-h-screen ${
-        theme === "Dark" ? "bg-black text-white" : "bg-gray-50 text-orange-500 font-mono "
-      } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}>
+    <div
+      className={`min-h-screen ${
+        theme === "Dark"
+          ? "bg-black text-white"
+          : "bg-gray-50 text-orange-500 font-mono "
+      } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}
+    >
       <LeftSidebar />
       <div className="flex-1 p-4 md:p-8">
         <Navbar page={page} />
@@ -116,7 +121,7 @@ function Projects() {
                 <div>{item.icon}</div>
                 <div>
                   <PointerHighlight
-                  className='p-2'
+                    className="p-2"
                     rectangleClassName={item.rectangleClassName}
                     pointerClassName={item.pointerClassName}
                     containerClassName={item.containerClassName}
@@ -125,7 +130,9 @@ function Projects() {
                       {item.title}
                     </h3>
                   </PointerHighlight>
-                  <li className="text-sm text-gray-400 mt-3">{item.description}</li>
+                  <li className="text-sm text-gray-400 mt-3">
+                    {item.description}
+                  </li>
                 </div>
               </div>
             ))}
@@ -141,44 +148,51 @@ function Projects() {
         <ProjectsNavbar />
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {Projects_Web.length > 0 ? (
-            Projects_Web.map((project, index) => (
-              <div
-                data-aos={project.ani}
-                key={index}
-                onClick={() => openModal(project)}
-                className="cursor-pointer bg-[#1c1c1c] rounded-2xl shadow-md hover:shadow-blue-500/30 transition-shadow duration-300"
-              >
-                <img
-                  src={project.thumbnil}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-t-2xl"
-                />
-                <div className="p-4">
-                  <h2 className="text-xl font-semibold mb-1">
-                    {project.title}
-                  </h2>
-                  <p className="text-sm text-gray-400 mb-2">
-                    {project.description}
-                  </p>
-                  <p className="text-sm">
-                    <span className="font-semibold text-blue-500">Type:</span>{" "}
-                    <span className="text-amber-400">
-                      {project.ProjectType}
-                    </span>
-                  </p>
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="col-span-full flex justify-center mt-3">
-              <p className="px-6 py-3 bg-gray-900 text-blue-400 rounded-xl border border-blue-700 shadow-lg font-mono text-base text-center">
-                🚧 Adding soon! Available within{" "}
-                <span className="text-amber-400 font-semibold">24 Hr's</span>
-              </p>
-            </div>
-          )}
+  {Projects_Web.length > 0 ? (
+    Projects_Web.map((project, index) => (
+      <div
+        data-aos={project.ani}
+        key={index}
+        onClick={() => openModal(project)}
+        className="relative cursor-pointer bg-[#1c1c1c] rounded-2xl shadow-md hover:shadow-blue-500/30 transition-shadow duration-300"
+      >
+        {/* New Project Badge */}
+        {project.IsNewProject && (
+          <span className="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded-md shadow-md">
+            NEW
+          </span>
+        )}
+
+        <img
+          src={project.thumbnil}
+          alt={project.title}
+          className="w-full h-48 object-cover rounded-t-2xl"
+        />
+
+        <div className="p-4">
+          <h2 className="text-xl font-semibold mb-1">{project.title}</h2>
+
+          <p className="text-sm text-gray-400 mb-2">
+            {project.description}
+          </p>
+
+          <p className="text-sm">
+            <span className="font-semibold text-blue-500">Type:</span>{" "}
+            <span className="text-amber-400">{project.ProjectType}</span>
+          </p>
         </div>
+      </div>
+    ))
+  ) : (
+    <div className="col-span-full flex justify-center mt-3">
+      <p className="px-6 py-3 bg-gray-900 text-blue-400 rounded-xl border border-blue-700 shadow-lg font-mono text-base text-center">
+        🚧 Adding soon! Available within{" "}
+        <span className="text-amber-400 font-semibold">24 Hr's</span>
+      </p>
+    </div>
+  )}
+</div>
+
 
         {/* Modal with Card UI */}
         <Modal
@@ -224,6 +238,7 @@ function Projects() {
                 alt={selectedProject.title}
                 className="w-full h-60 object-cover rounded-lg"
               />
+              
               <h2 className="text-2xl font-bold">{selectedProject.title}</h2>
               <p className="text-sm text-gray-300">
                 {selectedProject.description}

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import axios from "axios";
 import ScrollIndicator from "../Components/ScrollIndicator";
+import { ThemeContext } from "./ThemeContext";
 function Contact() {
   const page = "Contact";
   const [name, setName] = useState("");
@@ -11,6 +12,7 @@ function Contact() {
   const [Message, setMessage] = useState("");
   const [loading, Setloading] = useState(false);
   const [URL, Seturl] = useState("");
+     const { theme, setTheme } = useContext(ThemeContext);
   useEffect(() => {
     const Load = () => {
       let url =
@@ -62,8 +64,8 @@ function Contact() {
       alert("Something went wrong. Please try again.");
     }
   };
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
-  console.log(theme, "themethemethemethemetheme");
+
+  // console.log(theme, "themethemethemethemetheme")     
 
   // Save to localStorage when theme changes
   useEffect(() => {
@@ -90,8 +92,8 @@ function Contact() {
           </h2>
           <p
             className={` ${
-              theme === "Dark" ? "text-gray-900 " : "text-gray-300"
-            }text-lg font-Roboto`}
+              theme === "Dark" ? "text-white " : "text-gray-300"
+            }text-lg font-Roboto `}
           >
             Have a project in mind, a collaboration opportunity, or just want to
             chat? Feel free to reach out. I’m always open to discussing new
@@ -117,7 +119,7 @@ function Contact() {
                 <label className="block mb-1 text-sm font-medium">Email</label>
                 <input
                   type="email"
-                  placeholder="you@example.com"
+                  placeholder="you@gmail.com"
                   onChange={(event) => setEmail(event.target.value)}
                   className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />

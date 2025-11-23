@@ -1,6 +1,9 @@
+import React, { Suspense } from "react";
+
 import About from "./Pages/About";
 import { Helmet } from "react-helmet";
-
+// import Load from "./Components/Load";
+const LoadersToShow = React.lazy(() => import("./Components/Load"));
 function App() {
   return (
     <>
@@ -32,7 +35,10 @@ function App() {
         <meta property="og:type" content="website" />
       </Helmet>
 
-      <About />
+      <Suspense fallback={<Load></Load>}>
+        <LoadersToShow />
+  
+      </Suspense>
     </>
   );
 }

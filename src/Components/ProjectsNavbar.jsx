@@ -48,6 +48,14 @@ function ProjectsNavbar() {
           </li>
           <li>
             <button
+              onClick={() => handleProjectFilter("Data Analytics")}
+              className="relative px-4 py-2 rounded-xl transition-all duration-200 hover:scale-105 text-gray-300 hover:bg-gray-800 hover:text-white"
+            >
+              Data Analytics
+            </button>
+          </li>
+          <li>
+            <button
               onClick={() => handleProjectFilter("Design")}
               className="relative px-4 py-2 rounded-xl transition-all duration-200 hover:scale-105 text-gray-300 hover:bg-gray-800 hover:text-white"
             >

@@ -14,6 +14,8 @@ import pic from "../Pages/profile.jpg";
 import ResumeButton from "./ResumeButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Share } from "lucide-react";
+import ShareBtn from "../Pages/Share"
 const LeftSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
@@ -86,9 +88,10 @@ const LeftSidebar = () => {
               </span>
             </div>
 
-            <div title="Download my resume (PDF)">
-              <ResumeButton />
-            </div>
+            <div >
+      <ResumeButton />
+    </div>
+              
 
             <hr className="my-6 border-gray-700" />
 
@@ -120,7 +123,7 @@ const LeftSidebar = () => {
                 <p className="text-sm text-gray-400 mb-1">Phone</p>
                 <div className="flex items-center gap-3">
                   <FaPhone className="text-green-400 text-xl" />
-                  <span title="Call or WhatsApp me">+91 7396994383</span>
+              <a href="tel:7396994383" className="text-orange-500 hover:underline">7396994383</a>
                 </div>
               </div>
 
@@ -161,6 +164,7 @@ const LeftSidebar = () => {
                 >
                   <FaGithub />
                 </a>
+                <ShareBtn></ShareBtn>
               </div>
             </div>
           </div>
