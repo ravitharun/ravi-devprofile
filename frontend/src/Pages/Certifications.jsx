@@ -11,7 +11,7 @@ function Certifications() {
    const { theme, setTheme } = useContext(ThemeContext);
   const certifications = [
     {
-      title: "Introduction to AI Concepts",
+      title: "Introduction to AI Concept",
       issuer: "Microsoft Learn",
       date: "July 2, 2025",
       iconDate: <FaRegCalendarAlt />,
@@ -41,10 +41,6 @@ function Certifications() {
       skills: ["Data extraction","Data Cleaning","power bi"],
     },
   ];
-
-
-
-
   useEffect(() => {
     localStorage.setItem("theme", theme);
   }, [theme]);
