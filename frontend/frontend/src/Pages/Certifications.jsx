@@ -11,7 +11,7 @@ function Certifications() {
    const { theme, setTheme } = useContext(ThemeContext);
   const certifications = [
     {
-      title: "Introduction to AI Concept",
+      title: "Introduction to AI Concepts",
       issuer: "Microsoft Learn",
       date: "July 2, 2025",
       iconDate: <FaRegCalendarAlt />,
@@ -30,17 +30,11 @@ function Certifications() {
       post_img: "https://media.licdn.com/dms/image/v2/D5622AQH3eXxlmnnhRg/feedshare-shrink_2048_1536/B56Zi7iXk8G0Ao-/0/1755493006806?e=1758758400&v=beta&t=m4N4g33KEV9D_U9XbxSQOQ08rmLpe0naM1FsNQQfGpk",
       skills: ["AI/ml", "Machine Learning", "Data Science","sql","power bi"],
     },
-    {
-      title: "Data	Visualisation:	Empowering	Business with	Effective	Insights",
-      issuer: "Forage",
-      date: "November 10th, 2025",     
-      iconDate: <FaRegCalendarAlt />,
-      iconSocial: <FaLinkedinIn />,
-      link: "https://www.linkedin.com/in/ravitharun07/details/certifications/",
-      post_img: "https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_qguNsDhvysJGEGrX2_1762760866233_completion_certificate.pdf",
-      skills: ["Data extraction","Data Cleaning","power bi"],
-    },
   ];
+
+
+
+
   useEffect(() => {
     localStorage.setItem("theme", theme);
   }, [theme]);

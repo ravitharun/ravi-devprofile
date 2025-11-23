@@ -1,0 +1,46 @@
+import React, { Suspense } from "react";
+
+import About from "./Pages/About";
+import { Helmet } from "react-helmet";
+// import Load from "./Components/Load";
+const LoadersToShow = React.lazy(() => import("./Components/Load"));
+function App() {
+  return (
+    <>
+      <Helmet>
+        <meta
+          name="google-site-verification"
+          content="google64e9e9010771d280"
+        />
+      </Helmet>
+      <Helmet>
+        <title>Tharun Ravi | MERN Stack Developer</title>
+        <meta
+          name="google-site-verification"
+          content="ISqboZgswSv2uLQ-yck-CMn7LI_UENp475g6i_nCZbM"
+        />
+        <meta
+          name="description"
+          content="Explore MERN Stack projects and professional journey of Tharun Ravi."
+        />
+        <meta property="og:title" content="Tharun Ravi Protifilo" />
+        <meta
+          property="og:image"
+          content="https://ravi-tharun-protifilo.netlify.app/images/protifilo-preview.png"
+        />
+        <meta
+          property="og:url"
+          content="https://ravi-tharun-protifilo.netlify.app"
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <Suspense fallback={<Load></Load>}>
+        <LoadersToShow />
+  
+      </Suspense>
+    </>
+  );
+}
+
+export default App;
