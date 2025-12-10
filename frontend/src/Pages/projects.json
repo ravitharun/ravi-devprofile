@@ -1,53 +1,5 @@
 [
-  {
-    "id": 1,
-    "title": "Protifilo Website",
-    "description": "My personal portfolio website showcasing my development skills, projects, and contact information with a responsive modern UI.",
-    "techStack": [
-      "React",
-      "Tailwind CSS",
-      "Framer Motion"
-    ],
-    "outcomes": [],
-    "images": [
-      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
-      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
-      "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180"
-    ],
-    "tools": [
-      "Figma",
-      "Netlify",
-      "Git"
-    ],
-    "features": [
-      "Responsive layout",
-      "Animated transitions",
-      "Dark mode toggle"
-    ],
-    "role": "Solo Developer",
-    "type": "Personal Project",
-    "tags": [
-      "Portfolio",
-      "React",
-      "UI/UX"
-    ],
-    "startDate": "2024-08-01",
-    "endDate": "2024-09-15",
-    "duration": "1.5 months",
-    "status": "Completed",
-    "liveLink": "https://raviprotifilo.netlify.app/",
-    "githubLink": "https://github.com/ravitharun/ravi-devprofile",
-    "videoDemo": "https://www.youtube.com/watch?v=gxHXPmePnvo",
-    "screenshots": [
-      "/images/protifilo1.png",
-      "/images/protifilo2.png"
-    ],
-    "outcomes": [],
-    "ani": "zoom-in",
-    "isFeatured": true,
-    "thumbnil": "https://tse4.mm.bing.net/th/id/OIP.Df5TT-EO3mn29jVLCyh1FQHaDa?pid=Api&P=0&h=180",
-    "ProjectType": "Web"
-  },
+
   {
     "id": 3,
     "ani": "zoom-in",

@@ -25,7 +25,7 @@ function Projects() {
   const location = useLocation();
   const Projects_Web = location.state || PROJECTS; // fallback
   const { theme } = useContext(ThemeContext);
-
+console.log(Projects_Web,'Projects_Web')
   useEffect(() => {
     AOS.init({
       duration: 800,
