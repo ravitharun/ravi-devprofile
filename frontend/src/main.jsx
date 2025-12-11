@@ -41,7 +41,6 @@ export function Main() {
 
             }
           />
-          <Route path="/blog" element={<Blog />} />
           <Route path="/portfolio" element={<Projects />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/resume" element={<Resume />} />
