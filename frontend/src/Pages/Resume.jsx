@@ -9,7 +9,8 @@ import { useContext, useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { ThemeContext } from "./ThemeContext";
-
+import ScrollTop from "../Components/ScrollTop";
+// import 
 function Resume() {
   const page = "Resume";
   // const [theme, setTheme] = useState(localStorage.getItem("theme") || "System");
@@ -25,6 +26,7 @@ function Resume() {
   }, [theme]);
 
   return (
+    <>
     <div
       className={`min-h-screen flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 ${
         theme === "Dark" ? "bg-black text-white" : "bg-gray-50 text-gray-900"
@@ -79,6 +81,9 @@ function Resume() {
         </section>
       </div>
     </div>
+          <ScrollTop></ScrollTop>
+          </>
+
   );
 }
 

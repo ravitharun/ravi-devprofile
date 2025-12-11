@@ -4,6 +4,7 @@ import Navbar from "../Components/Navbar";
 import axios from "axios";
 import ScrollIndicator from "../Components/ScrollIndicator";
 import { ThemeContext } from "./ThemeContext";
+import ScrollTop from "../Components/ScrollTop";
 function Contact() {
   const page = "Contact";
   const [name, setName] = useState("");
@@ -40,7 +41,7 @@ function Contact() {
     }
 
     // ✅ Basic email format check
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s..]+..[^\s..]+\.[^\s..]+$/;
     if (!emailRegex.test(data.Email)) {
       alert("Please enter a valid email address.");
       return;
@@ -72,6 +73,7 @@ function Contact() {
     localStorage.setItem("theme", theme);
   }, [theme]);
   return (
+    <>
     <div
       className={`min-h-screen ${
         theme === "Dark"
@@ -119,7 +121,7 @@ function Contact() {
                 <label className="block mb-1 text-sm font-medium">Email</label>
                 <input
                   type="email"
-                  placeholder="you@gmail.com"
+                  placeholder="you..gmail.com"
                   onChange={(event) => setEmail(event.target.value)}
                   className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
@@ -180,17 +182,20 @@ function Contact() {
                 directly via email:
               </p>
               <a
-                href="mailto:tharunravi672@gmail.com"
+                href="mailto:tharunravi672..gmail.com"
                 className="block mt-2 text-yellow-400 font-semibold hover:underline hover:text-blue-500"
                 title="Have a project in mind? Feel free to email me!"
               >
-                tharunravi672@gmail.com
+                tharunravi672..gmail.com
               </a>
             </div>
           </>
         </div>
       </div>
     </div>
+          <ScrollTop></ScrollTop>
+
+    </>
   );
 }
 

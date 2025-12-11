@@ -5,6 +5,7 @@ import { FaLinkedinIn, FaRegCalendarAlt } from "react-icons/fa";
 // import { useState } from "react";
 import { useEffect } from "react";
 import { ThemeContext } from "./ThemeContext";
+import ScrollTop from "../Components/ScrollTop";
 
 function Certifications() {
   const page = "Certifications";
@@ -45,6 +46,7 @@ function Certifications() {
     localStorage.setItem("theme", theme);
   }, [theme]);
   return (
+    <>
     <div     className={`min-h-screen ${
         theme === "Dark" ? "bg-black text-white" : "bg-white-100 text-orange-500 font-mono "
       } flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 relative`}>
@@ -153,6 +155,9 @@ function Certifications() {
         </div>
       </div>
     </div>
+          <ScrollTop></ScrollTop>
+
+    </>
   );
 }
 
