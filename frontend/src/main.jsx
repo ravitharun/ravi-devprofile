@@ -11,6 +11,7 @@ import Certifications from "./Pages/Certifications.jsx";
 import { ThemeProvider } from "./Pages/ThemeContext";
 import Load from "./Components/Load";
 import About from "./Pages/About";
+import WorkExp from "./Pages/WorkExp";
 
 const Home = React.lazy(() => import("./Pages/Home"));
 
@@ -44,6 +45,7 @@ export function Main() {
           <Route path="/portfolio" element={<Projects />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/WorkExp" element={<WorkExp />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>

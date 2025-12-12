@@ -3,7 +3,7 @@ import { Timeline } from "./Timeline";
 import { FaGraduationCap, FaMapMarkerAlt } from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
 
-export function TimelineDemo() {
+export function TimelineDemo({ workExpPgae }) {
   const data = [
     {
       title: "B.Tech (CSE)",
@@ -69,9 +69,32 @@ export function TimelineDemo() {
     },
   ];
 
+
+  const work = [{
+    title: "B.Tech (CSE)",
+    content: (
+      <div>
+        <p className="mb-3 text-black font-medium text-base">
+          Currently in my final year of Bachelor of Technology (B.Tech) in
+          Computer Science and Engineering at <span className="text-orange-500 font-semibold">Dayananda Sagar University</span>, Bangalore.
+        </p>
+        <p className="flex flex-wrap items-center gap-2 text-sm text-gray-700">
+          <FaGraduationCap className="text-orange-500 text-lg" />
+          <span className="font-semibold text-black">Expected Graduation:</span>
+          <span className="text-gray-700">2026</span>
+          <span className="text-gray-500 text-xs">(2022 – 2026)</span>
+        </p>
+        <div className="flex items-center gap-2 text-gray-700 mt-1">
+          <FaMapMarkerAlt className="text-orange-500" /> <span className="text-black font-medium">Bangalore, Karnataka</span>
+        </div>
+      </div>
+    ),
+    icon: <FaGraduationCap className="text-orange-500" />,
+    animi: "fade-left",
+  },]
   return (
     <div className="relative w-full overflow-clip">
-      <Timeline data={data} />
+      <Timeline data={data} work={work} workExpPgae={workExpPgae} />
     </div>
   );
 }

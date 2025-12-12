@@ -2,7 +2,9 @@
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
-export const Timeline = ({ data }) => {
+export const Timeline = ({ data, work, workExpPgae }) => {
+  console.log(workExpPgae, 'workExpPgae')
+  console.log(work, 'work')
   const ref = useRef(null);
   const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
@@ -27,40 +29,69 @@ export const Timeline = ({ data }) => {
       className="w-full border-1 dark:bg-black bg-gradient-to-b from-purple-50 via-blue-50 to-white font-sans md:px-10"
       ref={containerRef}
     >
-      {/* Heading and description at the top */}
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 text-center">
-        <h2 className="text-lg md:text-4xl mb-2 text-orange-500 font-bold">
-          Journey so far
-        </h2>
-        <p className="text-blue-500 dark:text-green-400 text-sm md:text-base max-w-xl mx-auto font-medium">
-          7 Years of Exploring Aceternity — My Journey in a Timeline
-        </p>
-      </div>
+{/* Heading and description at the top */}
+<div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10 text-center">
+
+  <h2 className="text-2xl md:text-4xl font-extrabold 
+                 text-orange-600 dark:text-yellow-400 mb-3 tracking-wide">
+    {workExpPgae === 'WorkExp' ? "Professional Experience" : "My Journey So Far"}
+  </h2>
+
+  <p className="text-gray-900 :text-gray-300 text-sm md:text-lg max-w-2xl mx-auto font-medium">
+    {workExpPgae === 'WorkExp'
+      ? "A detailed overview of my work roles, responsibilities, and the experience I've gained throughout my career."
+      : "A timeline of my academic milestones, learning experiences, and the growth that shaped my professional path."}
+  </p>
+
+</div>
+
 
       {/* Timeline entries */}
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
-          >
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
+        {workExpPgae === 'WorkExp' ?
+          work.map((item, index) => (
+            <div
+              key={index}
+              className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            >
+              <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+                <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
+                  <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
+                </div>
+                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500">
+                  {item.title}
+                </h3>
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500">
-                {item.title}
-              </h3>
-            </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full border-2 border-white/40 rounded-lg p-5 shadow-sm">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-200">
-                {item.title}
-              </h3>
-              {item.content}
+              <div className="relative pl-20 pr-4 md:pl-4 w-full border-2 border-white/40 rounded-lg p-5 shadow-sm">
+                <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-200">
+                  {item.title}
+                </h3>
+                {item.content}
+              </div>
             </div>
-          </div>
-        ))}
+          )) : data.map((item, index) => (
+            <div
+              key={index}
+              className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            >
+              <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+                <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
+                  <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
+                </div>
+                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500">
+                  {item.title}
+                </h3>
+              </div>
+
+              <div className="relative pl-20 pr-4 md:pl-4 w-full border-2 border-white/40 rounded-lg p-5 shadow-sm">
+                <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-200">
+                  {item.title}
+                </h3>
+                {item.content}
+              </div>
+            </div>
+          ))}
         {/* Timeline vertical line */}
         <div
           style={{ height: height + "px" }}

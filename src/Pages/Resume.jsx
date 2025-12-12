@@ -57,9 +57,7 @@ function Resume() {
           <ResumeButton />
         </div>
         {/* Education Section */}
-        <h2 className="text-3xl font-bold mb-6 text-center md:text-left">
-          Education
-        </h2>
+      
         
         <TimelineDemo /> {/* Assuming you have a TimelineDemo component */}
         {/* Skills Section */}
