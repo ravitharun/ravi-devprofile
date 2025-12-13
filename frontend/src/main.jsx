@@ -2,7 +2,7 @@ import React, { StrictMode, Suspense, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Blog from "./Pages/Blog.jsx";
+// import Blog from "./Pages/Blog.jsx";
 import Projects from "./Pages/Projects.jsx";
 import Resume from "./Pages/Resume.jsx";
 import Contact from "./Pages/Contact.jsx";
