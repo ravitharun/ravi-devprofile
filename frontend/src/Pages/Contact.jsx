@@ -184,7 +184,7 @@ function Contact() {
               <a
                 href="mailto:tharunravi672..gmail.com"
                 className="block mt-2 text-yellow-400 font-semibold hover:underline hover:text-blue-500"
-                title="Have a project in mind? Feel free to email me!"
+                title="Have a project in mind? Feel free to email me"
               >
                 tharunravi672..gmail.com
               </a>

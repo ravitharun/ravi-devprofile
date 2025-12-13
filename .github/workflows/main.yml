@@ -9,3 +9,10 @@ jobs:
 
     steps:
       - run: echo "Hello World"
+      - run: echo "This is a simple GitHub Actions workflow."
+      - run: echo "Have a great day!"
+      - run: echo "Goodbye!"
+      - run: echo "End of workflow."
+      - run: echo "Just kidding, one more line!"
+      - run: echo "Workflow complete."
+      - run: echo "Final line, promise!"
