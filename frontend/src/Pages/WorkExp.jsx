@@ -10,6 +10,7 @@ import { TimelineDemo } from './TimelineDemo'
 function WorkExp() {
     const { theme, setTheme } = useContext(ThemeContext);
     const workExpPgae = 'WorkExp'
+    const page="Resume"
     return (
         <div
             className={`min-h-screen flex flex-col md:flex-row gap-6 md:gap-8 p-4 md:p-8 ${theme === "Dark" ? "bg-black text-white" : "bg-gray-50 text-gray-900"
@@ -21,7 +22,7 @@ function WorkExp() {
 
             {/* Main Content */}
             <div className="flex-1 flex flex-col gap-12 p-2 sm:p-6 md:p-8">
-                <Navbar />
+                <Navbar page={page} />
 
                 {/* Resume Intro */}
                 <section className="text-center md:text-left">
