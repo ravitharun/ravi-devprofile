@@ -2,7 +2,7 @@ import React from "react";
 
 function Load() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-full dark:bg-gray-900 px-4 text-center bg-gray-300">
+    <div className="flex flex-col items-center justify-center h-screen w-full dark:bg-gray-900 px-4 text-center bg-gray-900">
       {/* Big Spinning Gradient Circle */}
       <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 border-8 border-t-orange-500 border-b-orange-500 border-gray-300 rounded-full animate-spin"></div>
       
