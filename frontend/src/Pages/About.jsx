@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from "react";
 import LeftSidebar from "../Components/LeftSidebar";
 import Navbar from "../Components/Navbar";
 import ScrollIndicator from "../Components/ScrollIndicator";
-import { FaCode, FaPaintBrush, FaMobileAlt, FaRobot } from "react-icons/fa";
+import { FaCode, FaPaintBrush, FaMobileAlt, FaRobot, FaBriefcase, FaChartLine, FaGraduationCap, FaFileAlt, FaLaptopCode } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import GitHubCalendar from "react-github-calendar";
@@ -83,33 +83,54 @@ const About = () => {
 
             {/* Timeline */}
             <section className="bg-[#1c1c1e] p-6 rounded-xl border border-gray-700 hover:border-yellow-400 transition shadow-md">
-              <h2 className="text-2xl font-bold text-yellow-400 mb-4 border-l-4 pl-3 border-yellow-500">
-                📜 My Journey Timeline
+              <h2 className="text-2xl font-bold text-yellow-400 mb-4 border-l-4 pl-3 border-yellow-500 flex gap-2 items-center">
+                <FaFileAlt></FaFileAlt> My Journey Timeline
               </h2>
 
               <div className="space-y-4 text-gray-300 text-sm md:text-base">
                 <div className="flex items-start gap-3">
-                  <span className="text-xl">🎓</span>
+                  <span className="text-xl"><FaGraduationCap></FaGraduationCap></span>
                   <p>
                     <span className="font-semibold text-white">2022:</span> Started at{" "}
                     <b className="text-amber-500">Dayananda Sagar University</b>.
                   </p>
                 </div>
 
+
                 <div className="flex items-start gap-3">
-                  <span className="text-xl">💻</span>
+                  <span className="text-xl"><FaLaptopCode></FaLaptopCode></span>
                   <p>
                     <span className="font-semibold text-white">2022–2024:</span> Built
                     several MERN stack projects.
                   </p>
                 </div>
 
+
                 <div className="flex items-start gap-3">
-                  <span className="text-xl">🚀</span>
+                  <span className="text-xl text-indigo-400">
+                    <FaBriefcase />
+                  </span>
+
+                  <p className="text-gray-300 leading-relaxed">
+                    <span className="font-semibold text-white">2025:</span>{" "}
+                    Started my <span className="font-semibold text-amber-400">First Internship</span> as a{" "}
+                    <span className="font-semibold text-sky-400">Backend Developer</span> at{" "}
+                    <a
+                      href="https://www.linkedin.com/company/rebert-tech/posts/?feedView=all"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-emerald-400 hover:text-emerald-300 underline underline-offset-4"
+                    >
+                      Rebert Technology Pvt. Ltd.
+                    </a>
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <span className="text-xl"><FaChartLine></FaChartLine></span>
                   <p>
                     <span className="font-semibold text-white">Now:</span> Learning{" "}
-                    <span className="text-blue-400">AI</span> &{" "}
-                    <span className="text-blue-400">Machine Learning</span>.
+                    <span className="text-blue-400">Data Analysis</span> 
                   </p>
                 </div>
               </div>
