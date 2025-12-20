@@ -24,8 +24,6 @@ function ResumeButton() {
         <FaFilePdf className='inline mr-1 text-lg' /> 
         <span className='font-mono'>Resume</span>
       </button>
-
-      {/* POPUP USING PORTAL */}
       {IsopenResumes &&
         ReactDOM.createPortal(
           <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[9999]">
