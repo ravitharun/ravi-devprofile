@@ -89,9 +89,18 @@ const LeftSidebar = () => {
             </div>
 
             <div >
-      <ResumeButton />
-    </div>
-              
+
+              <center className="mt-9 bg-center">
+
+
+                <ResumeButton />
+
+
+
+              </center>
+
+            </div>
+
 
             <hr className="my-6 border-gray-700" />
 
@@ -123,7 +132,7 @@ const LeftSidebar = () => {
                 <p className="text-sm text-gray-400 mb-1">Phone</p>
                 <div className="flex items-center gap-3">
                   <FaPhone className="text-green-400 text-xl" />
-              <a href="tel:7396994383" className="text-orange-500 hover:underline">7396994383</a>
+                  <a href="tel:7396994383" className="text-orange-500 hover:underline">7396994383</a>
                 </div>
               </div>
 

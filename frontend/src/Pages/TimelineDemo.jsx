@@ -70,7 +70,7 @@ export function TimelineDemo({ workExpPgae }) {
   ];
 const work = [
   {
-    title: "Rebert Technology Pvt. Ltd – Remote Internship",
+    title: "Rebert Technology Pvt. Ltd – Remote (Internship)",
     content: (
       <div>
         <p className="mb-3 text-black font-medium text-base">
