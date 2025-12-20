@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from "react-dom";
 import MernResume from "../assets/Full Stack Development Updated1.pdf";
-import DataAnalystResume from "../assets/Ravi_Tharun_Data_Analyst_Resume.pdf";
+// import DataAnalystResume from "../assets/Ravi_Tharun_Data_Analyst_Resume.pdf";
 import { FaFilePdf, FaTimesCircle } from 'react-icons/fa';
 
 function ResumeButton() {
@@ -9,7 +9,7 @@ function ResumeButton() {
 
   const resume = [
     { filename: "MernStackDeveloper", fileurl: MernResume },
-    { filename: "DataAnalyst", fileurl: DataAnalystResume }
+    // { filename: "DataAnalyst", fileurl: DataAnalystResume }
   ];
 
   const DownloadResume = () => setopenResumes(prev => !prev);
