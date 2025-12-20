@@ -38,9 +38,9 @@ const About = () => {
       anim: "fade-up-right",
     },
     {
-      icon: <FaRobot />,
-      title: "AI & ML",
-      desc: "Smart web apps with AI & ML.",
+      icon: <FaChartLine />,
+      title: "Data Analysis",
+      desc: "Converting data into actionable insights.",
       anim: "fade-up-right",
       status: "Learning",
     },
@@ -130,7 +130,7 @@ const About = () => {
                   <span className="text-xl"><FaChartLine></FaChartLine></span>
                   <p>
                     <span className="font-semibold text-white">Now:</span> Learning{" "}
-                    <span className="text-blue-400">Data Analysis</span> 
+                    <span className="text-blue-400">Data Analysis</span>
                   </p>
                 </div>
               </div>
