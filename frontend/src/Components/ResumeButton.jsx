@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from "react-dom";
-import MernResume from "../assets/Full Stack Development Updated1.pdf";
+import MernResume from "../assets/Full_Stack_MERN_Developer.pdf";
+// ravi-devprofile\frontend\src\assets\Full_Stack_MERN_Developer.pdf
 // import DataAnalystResume from "../assets/Ravi_Tharun_Data_Analyst_Resume.pdf";
 import { FaFilePdf, FaTimesCircle } from 'react-icons/fa';
 
@@ -21,7 +22,7 @@ function ResumeButton() {
         className="inline-block px-3 py-1.5 text-sm bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-md shadow hover:scale-105 transition"
         onClick={DownloadResume}
       >
-        <FaFilePdf className='inline mr-1 text-lg' /> 
+        <FaFilePdf className='inline mr-1 text-lg' />
         <span className='font-mono'>Resume</span>
       </button>
       {IsopenResumes &&
@@ -46,10 +47,11 @@ function ResumeButton() {
                     key={idx}
                     className=" p-4 rounded flex justify-between bg-gray-900 border-white-500"
                   >
-                    <p className=" ">{data.filename}</p>
-                    <a href={data.fileurl} download>
-                      <FaFilePdf className="text-red-400 text-3xl" />
-                    </a>
+                    <div className="flex items-center gap-2">
+                      <a href={data.fileurl} download className="flex items-center gap-29">
+                        <p className="text-white hover:text-gray-500">{data.filename}</p>
+                        <FaFilePdf className="text-red-500 text-3xl ml-3 hover:text-red-400" />                      </a>
+                    </div>
                   </div>
                 ))}
               </div>
