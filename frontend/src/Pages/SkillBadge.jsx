@@ -117,6 +117,13 @@ export default function SkillBadge() {
               shadow: "rgba(22,163,74,0.6)",
             },
             {
+              name: "Redis",
+              icon: "",
+              imgurl: "https://th.bing.com/th/id/ODF.WcH1HNXG2kB-ROnG1upm_Q?w=32&h=32&qlt=90&pcl=fffffc&o=6&pid=1.2",
+              color: "bg-red-500",
+              shadow: "rgba(22,163,74,0.6)",
+            },
+            {
               name: "Express.js",
               icon: <SiExpress />,
               color: "bg-gray-800",
@@ -168,6 +175,7 @@ export default function SkillBadge() {
               whileTap={{ scale: 0.95 }}
               className={`flex items-center gap-2 px-4 py-2 ${skill.color} text-white rounded-full font-semibold text-sm`}
             >
+              <img src={skill.imgurl} alt={skill.name} />
               <span className="text-lg">{skill.icon}</span> {skill.name}
             </motion.div>
           ))}
@@ -218,86 +226,86 @@ export default function SkillBadge() {
       content: (
         <div className="flex flex-wrap gap-3">
           {
-          [
-            {
-              name: "NumPy",
-              icon: <SiNumpy />,
-              color: "bg-blue-500",
-              shadow: "rgba(59,130,246,0.6)",
-            },
-            {
-              name: "Pandas",
-              icon: <SiPandas />,
-              color: "bg-indigo-600",
-              shadow: "rgba(79,70,229,0.6)",
-            },
-            {
-              name: "OpenCV",
-              icon: <SiOpencv />,
-              color: "bg-teal-600",
-              shadow: "rgba(13,148,136,0.6)",
-            },
-            {
-              name: "Matplotlib",
-              icon: "📈",
-              color: "bg-rose-500",
-              shadow: "rgba(244,63,94,0.6)",
-            },
-            {
-              name: "Seaborn",
-              icon: (
-                <img
-                  src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg"
-                  alt="Seaborn"
-                  className="w-6 h-6"
-                />
-              ),
-              color: "bg-cyan-500",
-              shadow: "rgba(6,182,212,0.6)",
-            },
-            {
-              name: "Plotly",
-              icon: <SiPlotly />,
-              color: "bg-pink-500",
-              shadow: "rgba(236,72,153,0.6)",
-            },
-            {
-              name: "Power Bi",
-              icon: (
-                <img
-                  src="https://th.bing.com/th/id/OIP.S0GTuACXiCPQnB-LYT2vHgHaEc?o=7&cb=ucfimgc2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
-                  alt="power Bi"
-                  className="w-6 h-6"
-                />
-              ),
-              color: "bg-purple-500",
-              shadow: "rgba(236,72,153,0.6)",
-            },
-            {
-              name: "Ms Excel",     
-             icon: (
-                <img
-                  src="https://static.vecteezy.com/system/resources/previews/038/600/540/non_2x/microsoft-excel-logo-microsoft-icon-art-free-vector.jpg"
-                  alt="Ms Excel"
-                  className="w-6 h-6"
-                />
-              ),
-              color: "bg-indigo-500",
-              shadow: "rgba(236,72,153,0.4)",
-            },
-          ].map((skill, i) => (
-            <motion.div
-              key={i}
-              whileHover={{
-                scale: 1.1,
-                boxShadow: `0px 8px 20px ${skill.shadow}`,
-              }}
-              whileTap={{ scale: 0.95 }}
-              className={`flex items-center gap-2 px-4 py-2 ${skill.color} text-white rounded-full font-semibold text-sm`}
-            >
-              <span className="text-lg">{skill.icon}</span> {skill.name}
-            </motion.div>
-          ))}
+            [
+              {
+                name: "NumPy",
+                icon: <SiNumpy />,
+                color: "bg-blue-500",
+                shadow: "rgba(59,130,246,0.6)",
+              },
+              {
+                name: "Pandas",
+                icon: <SiPandas />,
+                color: "bg-indigo-600",
+                shadow: "rgba(79,70,229,0.6)",
+              },
+              {
+                name: "OpenCV",
+                icon: <SiOpencv />,
+                color: "bg-teal-600",
+                shadow: "rgba(13,148,136,0.6)",
+              },
+              {
+                name: "Matplotlib",
+                icon: "📈",
+                color: "bg-rose-500",
+                shadow: "rgba(244,63,94,0.6)",
+              },
+              {
+                name: "Seaborn",
+                icon: (
+                  <img
+                    src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg"
+                    alt="Seaborn"
+                    className="w-6 h-6"
+                  />
+                ),
+                color: "bg-cyan-500",
+                shadow: "rgba(6,182,212,0.6)",
+              },
+              {
+                name: "Plotly",
+                icon: <SiPlotly />,
+                color: "bg-pink-500",
+                shadow: "rgba(236,72,153,0.6)",
+              },
+              {
+                name: "Power Bi",
+                icon: (
+                  <img
+                    src="https://th.bing.com/th/id/OIP.S0GTuACXiCPQnB-LYT2vHgHaEc?o=7&cb=ucfimgc2rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="power Bi"
+                    className="w-6 h-6"
+                  />
+                ),
+                color: "bg-purple-500",
+                shadow: "rgba(236,72,153,0.6)",
+              },
+              {
+                name: "Ms Excel",
+                icon: (
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/038/600/540/non_2x/microsoft-excel-logo-microsoft-icon-art-free-vector.jpg"
+                    alt="Ms Excel"
+                    className="w-6 h-6"
+                  />
+                ),
+                color: "bg-indigo-500",
+                shadow: "rgba(236,72,153,0.4)",
+              },
+            ].map((skill, i) => (
+              <motion.div
+                key={i}
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: `0px 8px 20px ${skill.shadow}`,
+                }}
+                whileTap={{ scale: 0.95 }}
+                className={`flex items-center gap-2 px-4 py-2 ${skill.color} text-white rounded-full font-semibold text-sm`}
+              >
+                <span className="text-lg">{skill.icon}</span> {skill.name}
+              </motion.div>
+            ))}
         </div>
       ),
     },
@@ -395,11 +403,10 @@ export default function SkillBadge() {
           <button
             key={idx}
             onClick={() => setActive(idx)}
-            className={`px-5 py-2 rounded-xl font-semibold transition-all duration-300 ${
-              active === idx
-                ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg"
-                : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:scale-105"
-            }`}
+            className={`px-5 py-2 rounded-xl font-semibold transition-all duration-300 ${active === idx
+              ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg"
+              : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:scale-105"
+              }`}
           >
             {tab.label}
           </button>
