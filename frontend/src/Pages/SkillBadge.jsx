@@ -175,8 +175,17 @@ export default function SkillBadge() {
               whileTap={{ scale: 0.95 }}
               className={`flex items-center gap-2 px-4 py-2 ${skill.color} text-white rounded-full font-semibold text-sm`}
             >
-              <img src={skill.imgurl} alt={skill.name} />
-              <span className="text-lg">{skill.icon}</span> {skill.name}
+              {skill.imgurl == "" ? <img src={skill.imgurl} alt={skill.name} />
+
+
+                : <>
+
+
+
+                  <span className="text-lg">{skill.icon}</span> <p>{skill.name}</p>
+                </>
+              }
+
             </motion.div>
           ))}
         </div>
