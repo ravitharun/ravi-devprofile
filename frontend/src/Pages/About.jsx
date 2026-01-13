@@ -10,6 +10,7 @@ import GitHubCalendar from "react-github-calendar";
 // import Load from "../Components/Load";
 import { ThemeContext } from "./ThemeContext";
 import ScrollTop from "../Components/ScrollTop";
+import Projectss from "../Pages/Projectss.jsx";
 const About = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
@@ -218,6 +219,7 @@ const About = () => {
         </div>
       </div>
       <ScrollTop></ScrollTop>
+      <Projectss></Projectss>
     </>
 
   );
