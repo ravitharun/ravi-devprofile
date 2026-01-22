@@ -11,7 +11,7 @@ const coderData = {
   role: 'MERN Stack Developer',
   seniority: 'Fresher',
   location: 'Bangalore, India',
-  skills: ['React', 'JavaScript', "redis", 'TypeScript', 'TailwindCSS', 'CSS', 'Figma', 'GitHub', 'HTML', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Git']
+  skills: ['React', 'JavaScript', "redis", 'TypeScript', 'TailwindCSS', 'CSS', 'Figma', 'GitHub', 'HTML', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Git',"Docker"]
 };
 const CoderProfileCard = () => {
   return (<div className="w-full mx-auto bg-gradient-to-r from-zinc-100 to-zinc-200 dark:from-[#000000] dark:to-[#0a0d37] border-zinc-300 dark:border-[#1b2c68a0] relative rounded-lg border shadow-lg">
@@ -124,11 +124,22 @@ const Portfolio = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 items-center">
 
         { }
-        <div className="flex flex-col gap-4 sm:gap-6 items-start text-left order-2 lg:order-1 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-900/80 dark:bg-white/10 border border-gray-700 dark:border-gray-600 rounded-full text-xs sm:text-sm text-gray-200 dark:text-gray-300 backdrop-blur-sm hover:bg-gray-800 dark:hover:bg-white/20 transition-all duration-300">
-            <DotIcon />
-            Welcome to my universe
-          </div>
+        <div className="flex flex-col gap-4 sm:gap-6 items-start text-left order-2 lg:order-1 animate-fade-in-up ">
+          <div className="
+  inline-flex items-center gap-2 px-3 py-1
+  rounded-full text-xs sm:text-sm
+  bg-gray-900/80 text-gray-300
+  border border-gray-700
+  backdrop-blur-sm cursor-pointer
+  transition-all duration-300
+  hover:bg-gray-800
+  hover:text-red-400
+  hover:tracking-wide
+">
+  <DotIcon />
+  Welcome to my universe
+</div>
+
 
           <div className="relative">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
@@ -167,18 +178,20 @@ const Portfolio = () => {
             />
           </span>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 w-full sm:w-auto">
-            <Link to="/about">
-            <button className="px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
-              Explore
-            </button>
-            </Link>
-            <Link to="/portfolio" target="_blank" rel="noopener noreferrer">
-            <button className="px-6 py-3 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg font-semibold transition-all duration-300 hover:scale-105 active:scale-95">
-              View Portfolio
-            </button>
-            </Link>
-          </div>
+          <div className="flex flex-row justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-6 w-full">
+  <Link to="/about">
+    <button className="px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
+      Explore
+    </button>
+  </Link>
+
+  <Link to="/portfolio" target="_blank" rel="noopener noreferrer">
+    <button className="px-4 sm:px-6 py-2.5 sm:py-3 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg font-semibold transition-all duration-300 hover:scale-105 active:scale-95">
+      View Portfolio
+    </button>
+  </Link>
+</div>
+
         </div>
 
         { }

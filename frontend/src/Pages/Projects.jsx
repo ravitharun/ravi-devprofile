@@ -350,7 +350,7 @@ function Projects() {
                   </p>
                 </div>
                 <div>
-                  <p className="font-mono text-blue-500">Outcomes : </p>
+                  <p className="font-mono text-blue-500">{selectedProject.outcomes.length > 0?"Outcomes" :""} </p>
                   {selectedProject.outcomes.length > 0 ? (
                     <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
                       {selectedProject.outcomes.map((outcome, index) => (
@@ -358,12 +358,13 @@ function Projects() {
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-gray-500 font-stretch-75% border-2 border-gray-800 p-4 text-center">
-                      Adding Soon!
-                    </p>
+                    ""
+                    // <p className="text-gray-500 font-stretch-75% border-2 border-gray-800 p-4 text-center">
+                    //   Adding Soon!
+                    // </p>
                   )}
                 </div>
-                <div className="mt-6">
+                {/* <div className="mt-6">
                   <h3 className="text-lg font-semibold mb-2 text-blue-400">
                     Video Demo
                   </h3>
@@ -379,7 +380,7 @@ function Projects() {
                       </div>
                     )}
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex flex-wrap gap-4 mt-6">
                   <Link to={selectedProject.githubLink}>

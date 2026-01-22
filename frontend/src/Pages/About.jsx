@@ -219,7 +219,6 @@ const About = () => {
         </div>
       </div>
       <ScrollTop></ScrollTop>
-      {/* <Projectss></Projectss> */}
     </>
 
   );

@@ -26,8 +26,8 @@ export default function Home() {
   let vlu = Math.floor(Math.random() * pics.length)
   return (
     <>
-      {vlu == 0 ? <div className="w-full min-h-screen flex flex-col items-center justify-center bg-[#0f0f0f] text-center px-4 overflow-x-hidden">
-        {/* {MAth} */}
+      {vlu == 0 ?
+      <div className="w-full min-h-screen flex flex-col items-center justify-center bg-[#0f0f0f] text-center px-4 overflow-x-hidden">
         <SpotlightNewDemo />
 
 

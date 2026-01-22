@@ -44,7 +44,7 @@ export function Main() {
             }
           />
           <Route path="/portfolio" element={<Projects />} />
-          <Route path="/portfolios" element={<Projectss />} />
+          {/* <Route path="/portfolios" element={<Projectss />} /> */}
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/WorkExp" element={<WorkExp />} />
