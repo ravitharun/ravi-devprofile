@@ -21,9 +21,10 @@ function ResumeButton() {
       <button
         className="inline-block px-3 py-1.5 text-sm bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-md shadow hover:scale-105 transition"
         onClick={DownloadResume}
+        title='Download My Resume '
       >
-        <FaFilePdf className='inline mr-1 text-lg' />
-        <span className='font-mono'>Resume</span>
+        <FaFilePdf className='inline mr-1 text-lg' title='Download My Resume ' />
+        <span className='font-mono' title='Download My Resume '>Resume</span>
       </button>
       {IsopenResumes &&
         ReactDOM.createPortal(

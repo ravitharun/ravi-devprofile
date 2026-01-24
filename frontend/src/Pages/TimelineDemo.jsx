@@ -4,9 +4,10 @@ import { FaBriefcase, FaGraduationCap, FaMapMarkerAlt } from "react-icons/fa";
 import { MdSchool } from "react-icons/md";
 
 export function TimelineDemo({ workExpPgae }) {
+  const color = "text-black hover:text-gray-700 transition"
   const data = [
     {
-      title: "B.Tech (CSE)",
+      title: <p className={color}>B.Tech (CSE)</p>,
       content: (
         <div>
           <p className="mb-3 text-black font-medium text-base">
@@ -16,7 +17,7 @@ export function TimelineDemo({ workExpPgae }) {
           <p className="flex flex-wrap items-center gap-2 text-sm text-gray-700">
             <FaGraduationCap className="text-orange-500 text-lg" />
             <span className="font-semibold text-black">Expected Graduation:</span>
-            <span className="text-gray-700">2026</span>
+            <span className="text-gray-700 gap-5"><b>June</b> 2026</span>
             <span className="text-gray-500 text-xs">(2022 – 2026)</span>
           </p>
           <div className="flex items-center gap-2 text-gray-700 mt-1">
@@ -28,7 +29,7 @@ export function TimelineDemo({ workExpPgae }) {
       animi: "fade-left",
     },
     {
-      title: "Completed Class 12th",
+      title: <p className={color}>Completed Class 12th</p>,
       content: (
         <div>
           <p className="mb-3 text-black font-medium text-base">
@@ -48,7 +49,7 @@ export function TimelineDemo({ workExpPgae }) {
       animi: "fade-right",
     },
     {
-      title: "Completed Class 10th",
+      title: <p className={color}>Completed Class 10th</p>,
       content: (
         <div>
           <p className="mb-3 text-black font-medium text-base">
@@ -68,39 +69,39 @@ export function TimelineDemo({ workExpPgae }) {
       animi: "fade-up",
     },
   ];
-const work = [
-  {
-    title: "Rebert Technology Pvt. Ltd – Remote (Internship)",
-    content: (
-      <div>
-        <p className="mb-3 text-black font-medium text-base">
-          Currently working as a <span className="font-semibold">MERN Stack Developer</span> at 
-          <span className="text-orange-500 font-semibold"> <a  href="https://www.linkedin.com/company/rebert-tech/posts/?feedView=all" target="_
+  const work = [
+    {
+      title: <p className={color}>Rebert Technology Pvt. Ltd – Remote (Internship)</p>,
+      content: (
+        <div>
+          <p className="mb-3 text-black font-medium text-base">
+            Currently working as a <span className="font-semibold">MERN Stack Developer</span> at
+            <span className="text-orange-500 font-semibold"> <a href="https://www.linkedin.com/company/rebert-tech/posts/?feedView=all" target="_
           " title="Linkedin"> Rebert Technology Pvt. Ltd</a></span>, a Pune-based company, in a fully remote work environment.
-        </p>
+          </p>
 
-        <p className="text-sm text-gray-700 mb-2">
-          Gaining hands-on experience in real-world projects, collaborating with cross-functional teams, and strengthening practical development skills while balancing my final year of B.Tech.
-        </p>
+          <p className="text-sm text-gray-700 mb-2">
+            Gaining hands-on experience in real-world projects, collaborating with cross-functional teams, and strengthening practical development skills while balancing my final year of B.Tech.
+          </p>
 
-        <p className="flex flex-wrap items-center gap-2 text-sm text-gray-700">
-          <FaBriefcase className="text-orange-500 text-lg" />
-          <span className="font-semibold text-black">Duration:</span>
-          <span>6 Months</span>
-          <span className="text-gray-500 text-xs">(Nov 29, 2025 – Present)</span>
-        </p>
+          <p className="flex flex-wrap items-center gap-2 text-sm text-gray-700">
+            <FaBriefcase className="text-orange-500 text-lg" />
+            <span className="font-semibold text-black">Duration:</span>
+            <span>6 Months</span>
+            <span className="text-gray-500 text-xs">(Nov 29, 2025 – Present)</span>
+          </p>
 
-        <div className="flex items-center gap-2 text-gray-700 mt-1">
-          <FaMapMarkerAlt className="text-orange-500" />
-          <span className="text-black font-medium">Pune</span>
-          <span className="text-gray-500 text-xs">(Remote)</span>
+          <div className="flex items-center gap-2 text-gray-700 mt-1">
+            <FaMapMarkerAlt className="text-orange-500" />
+            <span className="text-black font-medium">Pune</span>
+            <span className="text-gray-500 text-xs">(Remote)</span>
+          </div>
         </div>
-      </div>
-    ),
-    icon: <FaBriefcase className="text-orange-500" />,
-    animi: "fade-left",
-  },
-];
+      ),
+      icon: <FaBriefcase className="text-orange-500" />,
+      animi: "fade-left",
+    },
+  ];
 
   return (
     <div className="relative w-full overflow-clip">
