@@ -1,0 +1,69 @@
+import React, { useState } from 'react';
+import ReactDOM from "react-dom";
+import MernResume from "../assets/Full_Stack_MERN_Developer.pdf";
+// ravi-devprofile\frontend\src\assets\Full_Stack_MERN_Developer.pdf
+// import DataAnalystResume from "../assets/Ravi_Tharun_Data_Analyst_Resume.pdf";
+import { FaFilePdf, FaTimesCircle } from 'react-icons/fa';
+
+function ResumeButton() {
+  const [IsopenResumes, setopenResumes] = useState(false);
+
+  const resume = [
+    { filename: "MernStackDeveloper", fileurl: MernResume },
+    // { filename: "DataAnalyst", fileurl: DataAnalystResume }
+  ];
+
+  const DownloadResume = () => setopenResumes(prev => !prev);
+
+  return (
+    <div>
+      {/* Resume Button */}
+      <button
+        className="inline-block px-3 py-1.5 text-sm bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-md shadow hover:scale-105 transition"
+        onClick={DownloadResume}
+        title='Download My Resume '
+      >
+        <FaFilePdf className='inline mr-1 text-lg' title='Download My Resume ' />
+        <span className='font-mono' title='Download My Resume '>Resume</span>
+      </button>
+      {IsopenResumes &&
+        ReactDOM.createPortal(
+          <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[9999]">
+            <div className="bg-gray-900 text-white w-96 p-6 rounded-xl shadow-2xl relative">
+
+              <button
+                onClick={DownloadResume}
+                className="absolute top-3 right-3 text-red-300 text-3xl"
+              >
+                <FaTimesCircle />
+              </button>
+
+              <h2 className="text-2xl font-semibold mb-5 text-center">
+                My Resumes
+              </h2>
+
+              <div className="space-y-4 ">
+                {resume.map((data, idx) => (
+                  <div
+                    key={idx}
+                    className=" p-4 rounded flex justify-between bg-gray-900 border-white-500"
+                  >
+                    <div className="flex items-center gap-2">
+                      <a href={data.fileurl} download className="flex items-center gap-29">
+                        <p className="text-white hover:text-gray-500">{data.filename}</p>
+                        <FaFilePdf className="text-red-500 text-3xl ml-3 hover:text-red-400" />                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </div>,
+          document.getElementById("resume-portal")
+        )
+      }
+    </div>
+  );
+}
+
+export default ResumeButton;
