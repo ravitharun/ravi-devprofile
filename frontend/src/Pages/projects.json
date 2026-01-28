@@ -147,8 +147,8 @@
     "endDate": "2025-04-15",
     "duration": "1.5 months",
     "status": "In Progress",
-    "liveLink": "https://studyhuberp.netlify.app/",
-    "githubLink": "https://github.com/ravitharun/edu-lms-mern",
+    "liveLink": "https://github.com/ravitharun/lms-portal-mern",
+    "githubLink": "https://github.com/ravitharun/lms-portal-mern",
     "videoDemo": "https://youtu.be/lms-demo",
     "testCredentials": {
       "student": {
