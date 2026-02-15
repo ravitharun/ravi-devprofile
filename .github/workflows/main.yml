@@ -16,3 +16,10 @@ jobs:
       - run: echo "Just kidding, one more line!"
       - run: echo "Workflow complete."
       - run: echo "Final line, promise!"
+  backend-dev:
+    needs: say-hello
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hi i am server running"
+      - run: echo "hi i am server running 2"
+      - run: echo "hi i am server running 3"
