@@ -88,7 +88,7 @@ export function TimelineDemo({ workExpPgae }) {
             <FaBriefcase className="text-orange-500 text-lg" />
             <span className="font-semibold text-black">Duration:</span>
             <span>6 Months</span>
-            <span className="text-gray-500 text-xs">(Nov 29, 2025 – Present)</span>
+            <span className="text-gray-500 text-xs">(Nov 27, 2025 – Present)</span>
           </p>
 
           <div className="flex items-center gap-2 text-gray-700 mt-1">
