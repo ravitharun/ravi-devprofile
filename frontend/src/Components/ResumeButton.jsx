@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from "react-dom";
-import MernResume from "../assets/Full_Stack_MERN_Developer.pdf";
-// ravi-devprofile\frontend\src\assets\Full_Stack_MERN_Developer.pdf
-// import DataAnalystResume from "../assets/Ravi_Tharun_Data_Analyst_Resume.pdf";
+import MernResume from "../assets/MERNDeveloper_RaviTharun.pdf";
 import { FaFilePdf, FaTimesCircle } from 'react-icons/fa';
 
 function ResumeButton() {
