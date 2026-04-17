@@ -40,7 +40,8 @@ export function SpotlightNewDemo() {
           transition={{ delay: 0.6, duration: 1 }}
           className="mt-3 text-lg md:text-2xl text-gray-200 font-medium"
         >
-          MERN Stack Developer & Data Analyst
+          Full Stack Developer (MERN Stack)
+          Building scalable web applications & real-time systems
         </motion.p>
 
         {/* Typewriter */}
