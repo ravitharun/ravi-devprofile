@@ -41,7 +41,7 @@ export function SpotlightNewDemo() {
           className="mt-3 text-lg md:text-2xl text-gray-200 font-medium"
         >
           Full Stack Developer (MERN Stack)
-          Building scalable web applications & real-time systems
+         <p> Building scalable web applications & real-time systems</p>
         </motion.p>
 
         {/* Typewriter */}
