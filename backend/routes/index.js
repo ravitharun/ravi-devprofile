@@ -17,10 +17,9 @@ const transporter = nodemailer.createTransport({
 router.post('/Send', async function (req, res) {
   try {
     const data = req.body;
+    console.log(data,'data')
 
-    // Validate required fields
-    
-console.log(data)
+
    const message = {
   from: data.Email,
   to: "tharunravi672@gmail.com",

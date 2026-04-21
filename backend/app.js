@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "https://raviprotifilo.netlify.app",
+  origin: ["https://raviprotifilo.netlify.app","http://localhost:5173"],
   methods: ["POST", "GET"]
 }));
 app.use(logger('dev'));
